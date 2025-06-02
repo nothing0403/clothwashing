@@ -1,6 +1,6 @@
-package com.example.demo.entity;
+package com.example.demo.model.entity;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -11,7 +11,8 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
-import jakarta.persistence.OneToOne;
+import jakarta.persistence.Temporal;
+import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -20,30 +21,32 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Order {
+public class Content {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer contentId;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
-	private LocalDateTime sendTime;
+	private Date contentSendTime;
 	
+	@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
-	private LocalDateTime receiveTime;
+	private Date contentReceiveTime;
 	
-	@Column(nullable = false)
-	private boolean state = false;
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+	private boolean contentState;
 	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
 	
 	@Column(nullable = false)
-	private Integer totalPrice;
+	private Integer contentPrice;
 	
-	@OneToMany(mappedBy = "order")
-	private List<Items> item;
+	@OneToMany(mappedBy = "content")
+	private List<Item> items;
 	
 	@ManyToOne
 	@JoinColumn(name = "sender_id")

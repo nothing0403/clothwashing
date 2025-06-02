@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -16,26 +16,26 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Items {
+public class Item {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer itemId;
 
 	@Column(nullable = false)
-	private Integer quantity;
+	private Integer itemQuantity;
 	
 	@Column(nullable = false)
 	private Integer itemPrice;
 	
-	@Column(nullable = false)
-	private boolean state = false;
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+	private boolean itemState;
 	
 	@ManyToOne
-	@JoinColumn(name = "order_id")
-	private Order order;
+	@JoinColumn(name = "content_id")
+	private Content content;
 	
 	@OneToOne
 	@JoinColumn(name = "cloth_id")
-	private Clothes cloth;
+	private Cloth cloth;
 }

@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.model.entity;
 
 import java.util.List;
 
@@ -16,36 +16,21 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
-
+public class Receiver {
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
-	
-	@Column(length = 50, nullable = false)
-	private String name;
-	
-	@Column(length = 50, nullable = false)
-	private String account;
-	
-	@Column(length = 50, nullable = false)
-	private String password;
-	
-	@Column(length = 50, nullable = false)
-	private String salt;
-	
-	@Column(length = 50, nullable = false)
-	private String phone;
-	
-	@Column(length = 50, nullable = false)
-	private String address;
-	
-	@Column(length = 50, nullable = false)
-	private String role;
-	
-	@Column(nullable = false)
-	private boolean active = false;
+	private Integer receiverId;
 
-	@OneToMany(mappedBy = "user")
-	private List<Order> orders;
+	@Column(length = 50, nullable = false)
+	private String receiverName;
+	
+	@Column(length = 50, nullable = false)
+	private String receiverPhone;
+	
+	@Column(length = 50, nullable = false)
+	private String receiverAddress;
+	
+	@OneToMany(mappedBy = "receiver")
+	private List<Content> contents;
 }

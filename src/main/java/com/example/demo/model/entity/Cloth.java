@@ -1,4 +1,4 @@
-package com.example.demo.entity;
+package com.example.demo.model.entity;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -14,21 +14,21 @@ import lombok.NoArgsConstructor;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Clothes {
+public class Cloth {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer id;
+	private Integer clothId;
+	
+	@Column(length=50, nullable = false)
+	private String clothKind;
+	
+	@Column(length=50, nullable = false)
+	private String clothSize;
 	
 	@Column(nullable = false)
-	private String kind;
-	
-	@Column(nullable = false)
-	private String size;
-	
-	@Column(nullable = false)
-	private Integer price;
+	private Integer clothPrice;
 
 	@OneToOne(mappedBy = "cloth")
-	private Items item;
+	private Item item;
 }
