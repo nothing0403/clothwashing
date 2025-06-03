@@ -20,7 +20,7 @@ public class ReceiverServiceImpl implements ReceiverService{
 	
 	@Override
 	public ReceiverDto getReceiver(Integer id) {
-		return mapToDto.receiverToDto(receiverRepository.getReceiver(id));
+		return mapToDto.receiverToDto(receiverRepository.findByReceiverId(id));
 	}
 
 	@Override

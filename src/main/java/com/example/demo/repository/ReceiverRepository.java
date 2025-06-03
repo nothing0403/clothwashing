@@ -5,10 +5,12 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.entity.Receiver;
+import java.util.List;
+
 
 @Repository
 public interface ReceiverRepository extends JpaRepository<Receiver, Integer>{
     
-	@Query(value = "select * from receiver where receiver_id =: receiverId", nativeQuery = true)
-	Receiver getReceiver(Integer receiverId);
+	@Query(value = "select * from receiver where receiver_id = :receiverId", nativeQuery = true)
+	Receiver findByReceiverId(Integer receiverId);
 }

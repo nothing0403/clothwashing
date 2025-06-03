@@ -8,16 +8,20 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.entity.Content;
 import com.example.demo.model.entity.Receiver;
+import com.example.demo.model.entity.Sender;
 
 @Repository
 public interface ContentRepository extends JpaRepository<Content, Integer>{
     
 	@Query(value = "select * from content where user_id = :userId", nativeQuery = true)
-	List<Content> getContentByUser(Integer userId);
+	List<Content> findByUserId(Integer userId);
 	
 	@Query(value = "select * from content where receiver_id = :receiverId", nativeQuery = true)
-	List<Receiver> getReceiverByContent(Integer receiverId);
+	Content findByReceiverId(Integer receiverId);
 	
 	@Query(value = "select * from content where sender_id = :senderId", nativeQuery = true)
-	List<Receiver> getSenderByContent(Integer senderId);
+	Content findBySenderId(Integer senderId);
+	
+	@Query(value = "select * from content where content_id = :contentId", nativeQuery = true)
+	Content findByContentId(Integer contentId);
 }

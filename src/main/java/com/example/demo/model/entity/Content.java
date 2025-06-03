@@ -30,11 +30,7 @@ public class Content {
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
-	private Date contentSendTime;
-	
-	@Temporal(TemporalType.TIMESTAMP)
-	@Column(nullable = false)
-	private Date contentReceiveTime;
+	private String contentBuildTime;
 	
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean contentState;
