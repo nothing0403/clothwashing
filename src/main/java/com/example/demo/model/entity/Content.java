@@ -11,6 +11,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Temporal;
 import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
@@ -48,11 +49,11 @@ public class Content {
 	@OneToMany(mappedBy = "content")
 	private List<Item> items;
 	
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name = "sender_id")
 	private Sender sender;
 	
-	@ManyToOne
+	@OneToOne
 	@JoinColumn(name = "receiver_id")
 	private Receiver receiver;
 }

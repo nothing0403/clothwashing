@@ -4133,3 +4133,43 @@ Caused by: java.sql.SQLSyntaxErrorException: You have an error in your SQL synta
 2025-06-02T12:10:45.974+08:00  INFO 1848 --- [ClothWashing] [RMI TCP Connection(26)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-06-02T12:10:45.975+08:00  INFO 1848 --- [ClothWashing] [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-06-02T12:10:45.978+08:00  INFO 1848 --- [ClothWashing] [RMI TCP Connection(26)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-02T12:10:47.295+08:00  INFO 4356 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 4356 (E:\JavaClass\Eclipse\eclipse-workspace\ClothWashing\target\classes started by NTPU in E:\JavaClass\Eclipse\eclipse-workspace\ClothWashing)
+2025-06-02T12:10:47.296+08:00  INFO 4356 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-02T12:10:47.595+08:00  INFO 4356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-02T12:10:47.596+08:00  INFO 4356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-02T12:10:47.613+08:00  INFO 4356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-02T12:10:47.613+08:00  INFO 4356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JDBC repository interfaces.
+2025-06-02T12:10:47.619+08:00  INFO 4356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-02T12:10:47.619+08:00  INFO 4356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-02T12:10:47.631+08:00  INFO 4356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 9 ms. Found 1 JPA repository interface.
+2025-06-02T12:10:47.839+08:00  INFO 4356 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-02T12:10:47.847+08:00  INFO 4356 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-02T12:10:47.848+08:00  INFO 4356 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.41]
+2025-06-02T12:10:47.950+08:00  INFO 4356 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-02T12:10:47.953+08:00  INFO 4356 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-02T12:10:47.954+08:00  INFO 4356 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 637 ms
+2025-06-02T12:10:48.031+08:00  INFO 4356 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-02T12:10:48.056+08:00  INFO 4356 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.15.Final
+2025-06-02T12:10:48.073+08:00  INFO 4356 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-02T12:10:48.215+08:00  INFO 4356 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-02T12:10:48.231+08:00  INFO 4356 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-02T12:10:48.316+08:00  INFO 4356 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@63e70bf9
+2025-06-02T12:10:48.317+08:00  INFO 4356 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-02T12:10:48.358+08:00  INFO 4356 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-02T12:10:48.866+08:00  INFO 4356 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-02T12:10:49.369+08:00  INFO 4356 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T12:10:49.706+08:00  INFO 4356 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-02T12:10:49.710+08:00  INFO 4356 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 2.625 seconds (process running for 2.917)
+2025-06-02T17:08:15.394+08:00  INFO 4356 --- [ClothWashing] [RMI TCP Connection(308)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-02T17:08:15.396+08:00  INFO 4356 --- [ClothWashing] [RMI TCP Connection(308)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-02T17:08:15.398+08:00  INFO 4356 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-02T17:08:15.400+08:00  INFO 4356 --- [ClothWashing] [RMI TCP Connection(308)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-02T17:08:15.401+08:00  INFO 4356 --- [ClothWashing] [RMI TCP Connection(308)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-02T17:08:15.402+08:00  INFO 4356 --- [ClothWashing] [RMI TCP Connection(308)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
