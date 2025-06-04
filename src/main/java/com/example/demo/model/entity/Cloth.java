@@ -21,7 +21,10 @@ public class Cloth {
 	private Integer clothId;
 	
 	@Column(length=50, nullable = false)
-	private String clothKind;
+	private String clothName;
+	
+	@Column(length=255, nullable = false)
+	private String imgUrl;
 	
 	@Column(length=50, nullable = false)
 	private String clothSize;

@@ -1,10 +1,19 @@
 package com.example.demo.service.impl;
 
+import java.util.Collections;
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.mapper.MapToDto;
+import com.example.demo.model.dto.ItemDto;
 import com.example.demo.model.entity.Cloth;
+import com.example.demo.model.entity.Content;
 import com.example.demo.model.entity.Item;
+import com.example.demo.repository.ClothRepository;
+import com.example.demo.repository.ContentRepository;
 import com.example.demo.repository.ItemRepository;
 import com.example.demo.service.ItemService;
 
@@ -12,14 +21,43 @@ import com.example.demo.service.ItemService;
 public class ItemServiceImpl implements ItemService{
 
 	@Autowired
+	private ClothRepository clothRepository;
+	
+	@Autowired
+	private ContentRepository contentRepository;
+	
+	@Autowired
 	private ItemRepository itemRepository;
 	
+	@Autowired
+	private MapToDto mapToDto;
+
 	@Override
-	public Integer getItemPrice(Cloth cloth) {
+	public void addItem(Integer quantity, Integer clothId, Integer contentId) {
 		
-		Item item = itemRepository.findByClothId(cloth.getClothId());
+		Item item = new Item();
 		
-		return cloth.getClothPrice()*item.getItemQuantity();
+		Cloth cloth = clothRepository.findByClothId(clothId);
+		Content content = contentRepository.findByContentId(contentId);
+		
+		Integer price = cloth.getClothPrice();
+		Integer itemPrice = price * quantity;
+		
+		item.setCloth(cloth);
+		item.setContent(content);
+		item.setItemQuantity(quantity);
+		item.setItemPrice(itemPrice);
+		item.setItemState(false);
+		
+		itemRepository.save(item);
+	}
+
+	@Override
+	public List<ItemDto> getItems(Integer contentId) {
+		List<Item> items = itemRepository.findAllByContentId(contentId);
+		
+		return items.stream().map(item -> mapToDto.itemToDto(item)).collect(Collectors.toList());
+		
 	}
 
 }

@@ -20,12 +20,21 @@ public class SenderServiceImpl implements SenderService{
 	
 	@Override
 	public SenderDto getSender(Integer id) {
+		
+		Sender sender = senderRepository.findBySenderId(id);
+		
+		if(sender == null) {
+			return null;
+		}
+		
 		return mapToDto.senderToDto(senderRepository.findBySenderId(id));
 	}
 
 	@Override
 	public void addSender(String name, String phone, String address) {
+		
 		Sender sender = new Sender();
+		
 		sender.setSenderName(name);
 		sender.setSenderPhone(phone);
 		sender.setSenderAddress(address);

@@ -3,9 +3,13 @@ package com.example.demo.mapper;
 import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Component;
 
+import com.example.demo.model.dto.ContentDto;
+import com.example.demo.model.dto.ItemDto;
 import com.example.demo.model.dto.ReceiverDto;
 import com.example.demo.model.dto.SenderDto;
 import com.example.demo.model.dto.UserDto;
+import com.example.demo.model.entity.Content;
+import com.example.demo.model.entity.Item;
 import com.example.demo.model.entity.Receiver;
 import com.example.demo.model.entity.Sender;
 import com.example.demo.model.entity.User;
@@ -25,5 +29,13 @@ public class MapToDto {
 	
 	public ReceiverDto receiverToDto(Receiver receiver) {
 		return modelMapper.map(receiver, ReceiverDto.class);
+	}
+	
+	public ItemDto itemToDto(Item item) {
+		return modelMapper.map(item, ItemDto.class);
+	}
+	
+	public ContentDto contentToDto(Content content) {
+		return modelMapper.map(content, ContentDto.class);
 	}
 }

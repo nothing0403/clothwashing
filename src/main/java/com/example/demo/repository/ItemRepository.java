@@ -12,7 +12,7 @@ import com.example.demo.model.entity.Item;
 public interface ItemRepository extends JpaRepository<Item, Integer>{
     
 	@Query(value = "select * from item where content_id =: contentId", nativeQuery = true)
-	List<Item> findByContentId(Integer contentId);
+	List<Item> findAllByContentId(Integer contentId);
 	
 	@Query(value = "select * from item where cloth_id =: clothId", nativeQuery = true)
 	Item findByClothId(Integer clothId);

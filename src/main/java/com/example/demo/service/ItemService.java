@@ -1,8 +1,12 @@
 package com.example.demo.service;
 
-import com.example.demo.model.entity.Cloth;
+import java.util.List;
+
+import com.example.demo.model.dto.ItemDto;
 
 public interface ItemService {
-
-	public Integer getItemPrice(Cloth cloth);
+	
+	public void addItem(Integer quantity, Integer clothId, Integer contentId);
+	
+	public List<ItemDto> getItems(Integer contentId);
 }

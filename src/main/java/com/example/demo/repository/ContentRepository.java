@@ -14,7 +14,10 @@ import com.example.demo.model.entity.Sender;
 public interface ContentRepository extends JpaRepository<Content, Integer>{
     
 	@Query(value = "select * from content where user_id = :userId", nativeQuery = true)
-	List<Content> findByUserId(Integer userId);
+	List<Content> findAllByUserId(Integer userId);
+	
+	@Query(value = "select * from content where user_name = :userName", nativeQuery = true)
+	List<Content> findAllByUserName(String userName);
 	
 	@Query(value = "select * from content where receiver_id = :receiverId", nativeQuery = true)
 	Content findByReceiverId(Integer receiverId);

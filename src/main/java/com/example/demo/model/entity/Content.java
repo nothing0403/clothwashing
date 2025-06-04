@@ -1,6 +1,5 @@
 package com.example.demo.model.entity;
 
-import java.util.Date;
 import java.util.List;
 
 import jakarta.persistence.Column;
@@ -12,8 +11,6 @@ import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
-import jakarta.persistence.Temporal;
-import jakarta.persistence.TemporalType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -28,9 +25,14 @@ public class Content {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer contentId;
 	
-	@Temporal(TemporalType.TIMESTAMP)
 	@Column(nullable = false)
 	private String contentBuildTime;
+	
+	@Column(nullable = false)
+	private String receiveTime;
+	
+	@Column(nullable = false)
+	private String sendTime;
 	
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean contentState;

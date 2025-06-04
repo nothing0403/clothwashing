@@ -1,12 +1,14 @@
 package com.example.demo.service;
 
+import com.example.demo.exception.PasswordErrorException;
+import com.example.demo.exception.UserNoFindException;
 import com.example.demo.model.dto.UserDto;
 
 public interface UserService {
 
-	public UserDto getUser(Integer id);
+	public UserDto getUser(String useraccount, String userpassword) throws UserNoFindException, PasswordErrorException;
 	
-	public void addUser(String name, String account, String password, 
-			            String phone, String address, String role);
+	public void addUser(String name, String email, String password, 
+			            String phone, String address);
 	
 }

@@ -11,8 +11,9 @@ import java.util.List;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer>{
 
-	@Query(value = "select * from user where user_id = :userId", nativeQuery = true)
-	User findByUserId(Integer userId);
+	// 從資料庫抓取對應的 user 資料，透過 useraccount
+	@Query(value = "select * from user where user_account = :useraccount", nativeQuery = true)
+	User findByUserAccount(String useraccount);
 	
 	
 }

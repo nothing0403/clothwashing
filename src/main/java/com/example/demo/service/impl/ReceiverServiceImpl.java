@@ -20,12 +20,21 @@ public class ReceiverServiceImpl implements ReceiverService{
 	
 	@Override
 	public ReceiverDto getReceiver(Integer id) {
+		
+		Receiver receiver = receiverRepository.findByReceiverId(id);
+		
+		if(receiver == null) {
+			return null;
+		}
+		
 		return mapToDto.receiverToDto(receiverRepository.findByReceiverId(id));
 	}
 
 	@Override
 	public void addReceiver(String name, String phone, String address) {
+		
 		Receiver receiver = new Receiver();
+		
 		receiver.setReceiverName(name);
 		receiver.setReceiverPhone(phone);
 		receiver.setReceiverAddress(address);
