@@ -1,6 +1,7 @@
 package com.example.demo.mapper;
 
 import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.example.demo.model.dto.ContentDto;
@@ -17,6 +18,7 @@ import com.example.demo.model.entity.User;
 @Component
 public class MapToDto {
 	
+	@Autowired
 	private ModelMapper modelMapper;
 
 	public UserDto userToDto(User user) {

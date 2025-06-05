@@ -11,4 +11,5 @@ public interface UserService {
 	public void addUser(String name, String email, String password, 
 			            String phone, String address);
 	
+	public void logoutUser(UserDto userDto);
 }

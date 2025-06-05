@@ -12,6 +12,8 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
 import com.example.demo.util.Hash;
 
+import jakarta.transaction.Transactional;
+
 @Service
 // 透過 repository 抓資料
 public class UserServiceImpl implements UserService{
@@ -23,6 +25,7 @@ public class UserServiceImpl implements UserService{
 	private MapToDto mapToDto;
 	
 	@Override
+	@Transactional
 	public UserDto getUser(String useraccount, String userpassword) throws UserNoFindException, PasswordErrorException{
 		// useraccount 是唯一值
 		User user = userRepository.findByUserAccount(useraccount);
@@ -31,22 +34,29 @@ public class UserServiceImpl implements UserService{
 		}
 		
 		String passwordHash = Hash.getHash(userpassword, user.getUserSalt());
-		if(passwordHash.equals(user.getUserPassword())) {
+		if(!passwordHash.equals(user.getUserPassword())) {
 			throw new PasswordErrorException("密碼錯誤");
 		}
+		
+		user.setUserActive(true);
+		userRepository.save(user);
+		System.out.println(user);
+		
 		// 將 user 轉成 userDTO 並回傳
 		return mapToDto.userToDto(user);
 	}
 
 	@Override
-	public void addUser(String name, String email, String password, String phone, String address) {
+	public void addUser(String name, String account, String password, String phone, String address) {
 		
 		User user = new User();
 		
 		user.setUserName(name);
-		user.setUserEmail(email);
+		user.setUserAccount(account);
 		
 		String salt = Hash.getSalt();
+		user.setUserSalt(salt);
+		
 		String passwordHash = Hash.getHash(password, salt);
 		user.setUserPassword(passwordHash);
 		
@@ -58,5 +68,14 @@ public class UserServiceImpl implements UserService{
 		userRepository.save(user);
 	}
 	
+	@Autowired
+	@Transactional
+	public void logoutUser(UserDto userDto) {
+		if(userDto != null) {
+			User user = userRepository.findByUserAccount(userDto.getUserAccount());
+			user.setUserActive(false);
+			userRepository.save(user);
+		}
+	}
 	
 }

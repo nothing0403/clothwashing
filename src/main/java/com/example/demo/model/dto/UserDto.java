@@ -15,9 +15,9 @@ public class UserDto {
 	@Size(min = 1, message = "{userDto.userName.size}")
 	private String userName;
 	
-	@NotNull(message = "{userDto.userEmail.notNull}")
-	@Size(min = 1, message = "{userDto.userEmail.size}")
-	private String userEmail;
+	@NotNull(message = "{userDto.userAccount.notNull}")
+	@Size(min = 1, message = "{userDto.userAccount.size}")
+	private String userAccount;
 
 	@NotNull(message = "{userDto.userPassword.notNull}")
 	@Size(min = 1, max = 50, message = "{userDto.userPassword.size}")
@@ -30,5 +30,4 @@ public class UserDto {
 	@NotNull(message = "{userDto.userAddress.notNull}")
 	@Size(min = 1, max = 50, message = "{userDto.userAddress.size}")
 	private String userAddress;
-	
 }
