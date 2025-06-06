@@ -37,12 +37,12 @@ public class Content {
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean contentState;
 	
+	@Column(nullable = false)
+	private Integer contentPrice;
+	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
-	
-	@Column(nullable = false)
-	private Integer contentPrice;
 	
 	@OneToMany(mappedBy = "content")
 	private List<Item> items;

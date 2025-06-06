@@ -23,8 +23,11 @@ public class Cloth {
 	@Column(length=50, nullable = false)
 	private String clothName;
 	
+	@Column(length=200, nullable = false)
+	private String clothDescription;
+	
 	@Column(length=255, nullable = false)
-	private String imgUrl;
+	private String clothImg;
 	
 	@Column(length=50, nullable = false)
 	private String clothSize;

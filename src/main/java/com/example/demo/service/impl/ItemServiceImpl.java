@@ -1,6 +1,5 @@
 package com.example.demo.service.impl;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -33,19 +32,17 @@ public class ItemServiceImpl implements ItemService{
 	private MapToDto mapToDto;
 
 	@Override
-	public void addItem(Integer quantity, Integer clothId, Integer contentId) {
+	public void addItem(Integer clothId, Integer clothquantity) {
 		
 		Item item = new Item();
 		
 		Cloth cloth = clothRepository.findByClothId(clothId);
-		Content content = contentRepository.findByContentId(contentId);
-		
-		Integer price = cloth.getClothPrice();
-		Integer itemPrice = price * quantity;
+		//Content content = contentRepository.findByContentId(contentId);
+
+		Integer itemPrice = cloth.getClothPrice() * clothquantity;
 		
 		item.setCloth(cloth);
-		item.setContent(content);
-		item.setItemQuantity(quantity);
+		//item.setContent(content);
 		item.setItemPrice(itemPrice);
 		item.setItemState(false);
 		

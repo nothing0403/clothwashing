@@ -16,4 +16,7 @@ public interface ClothRepository extends JpaRepository<Cloth, Integer>{
 	
 	@Query(value = "select * from cloth where cloth_name = :clothName", nativeQuery = true)
 	List<Cloth> findAllByClothName(String clothName);
+	
+	@Query(value = "select * from cloth", nativeQuery = true)
+	List<Cloth> findAllCloth();
 }

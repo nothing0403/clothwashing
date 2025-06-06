@@ -63,12 +63,11 @@ public class UserServiceImpl implements UserService{
 		user.setUserPhone(phone);
 		user.setUserAddress(address);
 		// 目前先預設，後面要新增員工
-		user.setUserRole("customer");
+		//user.setUserRole("customer");
 		
 		userRepository.save(user);
 	}
 	
-	@Autowired
 	@Transactional
 	public void logoutUser(UserDto userDto) {
 		if(userDto != null) {
