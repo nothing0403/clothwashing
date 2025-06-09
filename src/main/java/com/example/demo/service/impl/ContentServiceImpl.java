@@ -40,10 +40,8 @@ public class ContentServiceImpl implements ContentService{
 		// 訂單建立時間
 		LocalDateTime dateTime = LocalDateTime.now();
 		String dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
-		content.setContentBuildTime(dateTimeStr);
-		
-		content.setReceiveTime(receiveTime);
-		content.setSendTime(sendTime);
+		content.setContentBuildDate(dateTimeStr);
+		content.setContentFinalDate(sender.getSenderDate());
 		content.setContentState(false);
 		content.setContentPrice(items.stream().mapToInt(item -> item.getItemPrice()).sum());
 		
@@ -53,7 +51,7 @@ public class ContentServiceImpl implements ContentService{
 	@Override
 	public List<ContentDto> getContents(String useraccount) {
 		
-		List<Content> contents = contentRepository.findAllByUserName(useraccount);
+		List<Content> contents = contentRepository.findByUserName(useraccount);
 		
 		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
 	}

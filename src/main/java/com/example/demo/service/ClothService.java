@@ -6,8 +6,6 @@ import com.example.demo.model.dto.ClothDto;
 
 public interface ClothService {
 
-	public List<ClothDto> getClothes(String clothname);
-	
-	public List<ClothDto> getAllClothes();
+	public List<ClothDto> getCloth();
 
 }

@@ -31,6 +31,9 @@ public class Receiver {
 	@Column(length = 50, nullable = false)
 	private String receiverAddress;
 	
+	@Column(length = 50, nullable = false)
+	private String receiverDate;
+	
 	@OneToMany(mappedBy = "receiver")
 	private List<Content> contents;
 }

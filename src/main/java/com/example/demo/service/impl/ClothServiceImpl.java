@@ -12,8 +12,6 @@ import com.example.demo.model.entity.Cloth;
 import com.example.demo.repository.ClothRepository;
 import com.example.demo.service.ClothService;
 
-import jakarta.transaction.Transactional;
-
 @Service
 public class ClothServiceImpl implements ClothService{
 
@@ -24,17 +22,10 @@ public class ClothServiceImpl implements ClothService{
 	private MapToDto mapToDto;
 	
 	@Override
-	@Transactional
-	public List<ClothDto> getClothes(String clothname) {
-		List<Cloth> clothes = clothRepository.findAllByClothName(clothname);
-		return clothes.stream().map(cloth -> mapToDto.clothToDto(cloth)).collect(Collectors.toList()); 
+	public List<ClothDto> getCloth() {
+		List<Cloth> clothes = clothRepository.findAll();
+		
+		return clothes.stream().map(cloth -> mapToDto.clothToDto(cloth)).collect(Collectors.toList());
 	}
 
-	@Override
-	@Transactional
-	public List<ClothDto> getAllClothes() {
-		List<Cloth> clothes = clothRepository.findAllCloth();
-		return clothes.stream().map(cloth -> mapToDto.clothToDto(cloth)).collect(Collectors.toList()); 
-	}
-	
 }

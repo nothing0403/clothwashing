@@ -26,23 +26,20 @@ public class Content {
 	private Integer contentId;
 	
 	@Column(nullable = false)
-	private String contentBuildTime;
+	private String contentBuildDate;
 	
 	@Column(nullable = false)
-	private String receiveTime;
-	
-	@Column(nullable = false)
-	private String sendTime;
+	private String contentFinalDate;
 	
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean contentState;
 	
-	@Column(nullable = false)
-	private Integer contentPrice;
-	
 	@ManyToOne
 	@JoinColumn(name = "user_id")
 	private User user;
+	
+	@Column(nullable = false)
+	private Integer contentPrice;
 	
 	@OneToMany(mappedBy = "content")
 	private List<Item> items;

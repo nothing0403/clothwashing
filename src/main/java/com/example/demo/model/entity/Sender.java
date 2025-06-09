@@ -29,6 +29,9 @@ public class Sender {
 	@Column(length = 50, nullable = false)
 	private String senderAddress;
 	
+	@Column(length = 50, nullable = false)
+	private String senderDate;
+	
 	@OneToOne(mappedBy = "sender")
 	private Content content;
 }

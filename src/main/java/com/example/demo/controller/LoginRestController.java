@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -18,11 +16,13 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.exception.PasswordErrorException;
 import com.example.demo.exception.UserNoFindException;
 import com.example.demo.model.dto.ClothDto;
-import com.example.demo.model.dto.ItemDto;
+import com.example.demo.model.dto.DeliverDto;
 import com.example.demo.model.dto.UserDto;
 import com.example.demo.response.ApiResponse;
 import com.example.demo.service.ClothService;
 import com.example.demo.service.ItemService;
+import com.example.demo.service.ReceiverService;
+import com.example.demo.service.SenderService;
 import com.example.demo.service.UserService;
 
 import jakarta.servlet.http.HttpSession;
@@ -35,19 +35,42 @@ public class LoginRestController {
 	@Autowired
 	private UserService userService;
 	
-	@Autowired 
+	@Autowired
 	private ClothService clothService;
 	
 	@Autowired
 	private ItemService itemService;
 	
+	@Autowired
+    private ReceiverService receiverService;
+	
+	@Autowired
+	private SenderService senderService;
+	
 	@GetMapping("/home")
 	public ResponseEntity<ApiResponse<List<ClothDto>>> home(){
+		List<ClothDto> clothDtos = clothService.getCloth();
+		return ResponseEntity.ok(ApiResponse.success(null, clothDtos));
+	}
+	
+	@PostMapping("/deliver")
+	public ResponseEntity<ApiResponse<Void>> deliver(@RequestBody List<DeliverDto> deliverDto, HttpSession session){
 		
-		List<ClothDto> clothesDto = clothService.getAllClothes();
+		session.setAttribute("deliverDto", deliverDto);
 		
-		return ResponseEntity.ok(ApiResponse.success(null, clothesDto));
+		return ResponseEntity.ok(ApiResponse.success(null, null));
+	}	
+	
+	
+	@PostMapping("/update")
+	public ResponseEntity<ApiResponse<Void>> update(@RequestBody List<ClothDto> clothDtos, HttpSession session){
+		//clothDtos.stream().filter(clothDto -> clothDto.getClothQuantity() != 0).forEach(clothDto -> itemService.addItem(clothDto.getClothQuantity(), clothDto.getClothId(), 0));
 		
+		clothDtos.stream().filter(clothDto -> clothDto.getClothQuantity() != 0);
+		
+		session.setAttribute("clothDtos", clothDtos);
+		
+		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}
 	
 	@PostMapping("/login")
@@ -59,15 +82,6 @@ public class LoginRestController {
 		
 		return ResponseEntity.ok(ApiResponse.success("登入成功", null));
 		
-	}
-	
-	@PostMapping("/order")
-	public ResponseEntity<ApiResponse<Void>> order(@RequestBody List<ClothDto> clothDtos){
-		List<ClothDto> clothDtos2 = clothDtos.stream().filter(clothDto -> clothDto.getClothQuantity()!=0 ).collect(Collectors.toList());
-		for(ClothDto clothDto: clothDtos2) {
-			itemService.addItem(clothDto.getClothId(), clothDto.getClothQuantity());
-		}
-		return ResponseEntity.ok(ApiResponse.success("訂單已建立", null));
 	}
 	
 	@PutMapping("/logout")

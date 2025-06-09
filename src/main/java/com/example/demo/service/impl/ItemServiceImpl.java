@@ -32,17 +32,19 @@ public class ItemServiceImpl implements ItemService{
 	private MapToDto mapToDto;
 
 	@Override
-	public void addItem(Integer clothId, Integer clothquantity) {
+	public void addItem(Integer quantity, Integer clothId, Integer contentId) {
 		
 		Item item = new Item();
 		
 		Cloth cloth = clothRepository.findByClothId(clothId);
-		//Content content = contentRepository.findByContentId(contentId);
-
-		Integer itemPrice = cloth.getClothPrice() * clothquantity;
+		Content content = contentRepository.findByContentId(contentId);
+		
+		Integer price = cloth.getClothPrice();
+		Integer itemPrice = price * quantity;
 		
 		item.setCloth(cloth);
-		//item.setContent(content);
+		item.setContent(content);
+		item.setItemQuantity(quantity);
 		item.setItemPrice(itemPrice);
 		item.setItemState(false);
 		
@@ -51,7 +53,7 @@ public class ItemServiceImpl implements ItemService{
 
 	@Override
 	public List<ItemDto> getItems(Integer contentId) {
-		List<Item> items = itemRepository.findAllByContentId(contentId);
+		List<Item> items = itemRepository.findByContentId(contentId);
 		
 		return items.stream().map(item -> mapToDto.itemToDto(item)).collect(Collectors.toList());
 		

@@ -31,13 +31,15 @@ public class SenderServiceImpl implements SenderService{
 	}
 
 	@Override
-	public void addSender(String name, String phone, String address) {
+	public void addSender(String name, String phone, String address,String date) {
 		
 		Sender sender = new Sender();
 		
 		sender.setSenderName(name);
 		sender.setSenderPhone(phone);
 		sender.setSenderAddress(address);
+		sender.setSenderDate(date);
+		
 		senderRepository.save(sender);
 	}
 

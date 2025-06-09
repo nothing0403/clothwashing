@@ -7,7 +7,7 @@ import com.example.demo.model.entity.Cloth;
 
 public interface ItemService {
 	
-	public void addItem(Integer clothId, Integer quantity);
+	public void addItem(Integer quantity, Integer clothId, Integer contentId);
 	
 	public List<ItemDto> getItems(Integer contentId);
 	
