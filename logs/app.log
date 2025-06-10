@@ -179,3 +179,9 @@
 2025-06-09T11:18:45.637+08:00  INFO 5572 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
 2025-06-09T11:18:45.638+08:00  INFO 5572 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
 2025-06-09T11:18:45.639+08:00  INFO 5572 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-09T17:16:02.992+08:00  INFO 5572 --- [ClothWashing] [RMI TCP Connection(371)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-09T17:16:02.994+08:00  INFO 5572 --- [ClothWashing] [RMI TCP Connection(371)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-09T17:16:03.003+08:00  INFO 5572 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-09T17:16:03.006+08:00  INFO 5572 --- [ClothWashing] [RMI TCP Connection(371)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-09T17:16:03.007+08:00  INFO 5572 --- [ClothWashing] [RMI TCP Connection(371)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-09T17:16:03.008+08:00  INFO 5572 --- [ClothWashing] [RMI TCP Connection(371)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
