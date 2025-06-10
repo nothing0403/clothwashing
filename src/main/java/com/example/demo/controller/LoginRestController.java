@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -17,9 +18,14 @@ import com.example.demo.exception.PasswordErrorException;
 import com.example.demo.exception.UserNoFindException;
 import com.example.demo.model.dto.ClothDto;
 import com.example.demo.model.dto.DeliverDto;
+import com.example.demo.model.dto.ReceiverDto;
+import com.example.demo.model.dto.SenderDto;
 import com.example.demo.model.dto.UserDto;
+import com.example.demo.model.entity.Content;
+import com.example.demo.model.entity.Receiver;
 import com.example.demo.response.ApiResponse;
 import com.example.demo.service.ClothService;
+import com.example.demo.service.ContentService;
 import com.example.demo.service.ItemService;
 import com.example.demo.service.ReceiverService;
 import com.example.demo.service.SenderService;
@@ -39,36 +45,49 @@ public class LoginRestController {
 	private ClothService clothService;
 	
 	@Autowired
-	private ItemService itemService;
-	
-	@Autowired
-    private ReceiverService receiverService;
-	
-	@Autowired
-	private SenderService senderService;
+	private ContentService contentService;
 	
 	@GetMapping("/home")
-	public ResponseEntity<ApiResponse<List<ClothDto>>> home(){
+	public ResponseEntity<ApiResponse<List<ClothDto>>> home(HttpSession session){
+		
 		List<ClothDto> clothDtos = clothService.getCloth();
+		
 		return ResponseEntity.ok(ApiResponse.success(null, clothDtos));
 	}
 	
 	@PostMapping("/deliver")
-	public ResponseEntity<ApiResponse<Void>> deliver(@RequestBody List<DeliverDto> deliverDto, HttpSession session){
+	public ResponseEntity<ApiResponse<Object[]>> deliver(@RequestBody DeliverDto deliverDto, HttpSession session){
 		
 		session.setAttribute("deliverDto", deliverDto);
 		
 		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}	
 	
+	@GetMapping("/result")
+	public ResponseEntity<ApiResponse<Void>> result(HttpSession session){
+		
+		List<ClothDto> clothDtos = (List<ClothDto>)session.getAttribute("clothDtos");
+		
+		DeliverDto deliverDto = (DeliverDto)session.getAttribute("deliverDto");
+		
+		ReceiverDto receiverDto = deliverDto.getReceiverDto();
+		
+		SenderDto senderDto = deliverDto.getSenderDto();
+		
+		UserDto userDto = (UserDto)session.getAttribute("userDto");
+		
+		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
+		
+		return ResponseEntity.ok(ApiResponse.success(null, null));
+	}
+	
 	
 	@PostMapping("/update")
 	public ResponseEntity<ApiResponse<Void>> update(@RequestBody List<ClothDto> clothDtos, HttpSession session){
-		//clothDtos.stream().filter(clothDto -> clothDto.getClothQuantity() != 0).forEach(clothDto -> itemService.addItem(clothDto.getClothQuantity(), clothDto.getClothId(), 0));
 		
-		clothDtos.stream().filter(clothDto -> clothDto.getClothQuantity() != 0);
+		List<ClothDto> filterClothDtos = clothDtos.stream().filter(clothDto -> clothDto.getClothQuantity()!=0).collect(Collectors.toList());
 		
-		session.setAttribute("clothDtos", clothDtos);
+		session.setAttribute("clothDtos", filterClothDtos);
 		
 		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}

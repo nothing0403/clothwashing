@@ -26,13 +26,22 @@ public class MapToDto {
 	public UserDto userToDto(User user) {
 		return modelMapper.map(user, UserDto.class);
 	}
+	public User dtoToUser(UserDto userDto) {
+		return modelMapper.map(userDto, User.class);
+	}
     
 	public SenderDto senderToDto(Sender sender) {
 		return modelMapper.map(sender, SenderDto.class);
 	}
+	public Sender dtoToSender(SenderDto senderdto) {
+		return modelMapper.map(senderdto, Sender.class); 
+	}
 	
 	public ReceiverDto receiverToDto(Receiver receiver) {
 		return modelMapper.map(receiver, ReceiverDto.class);
+	}
+	public Receiver dtoToReceiver(ReceiverDto receiverDto) {
+		return modelMapper.map(receiverDto, Receiver.class);
 	}
 	
 	public ItemDto itemToDto(Item item) {
@@ -45,5 +54,8 @@ public class MapToDto {
 	
 	public ClothDto clothToDto(Cloth cloth) {
 		return modelMapper.map(cloth, ClothDto.class);
+	}
+	public Cloth dtoToCloth(ClothDto clothDto) {
+		return modelMapper.map(clothDto, Cloth.class);
 	}
 }

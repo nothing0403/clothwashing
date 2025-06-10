@@ -2,16 +2,15 @@ package com.example.demo.service;
 
 import java.util.List;
 
+import com.example.demo.model.dto.ClothDto;
 import com.example.demo.model.dto.ContentDto;
-import com.example.demo.model.entity.Item;
-import com.example.demo.model.entity.Receiver;
-import com.example.demo.model.entity.Sender;
-import com.example.demo.model.entity.User;
+import com.example.demo.model.dto.ReceiverDto;
+import com.example.demo.model.dto.SenderDto;
+import com.example.demo.model.dto.UserDto;
 
 public interface ContentService {
 
-	public void addContent(User user, Sender sender, Receiver receiver, 
-			List<Item> items, String receiveTime, String sendTime);
+	public void addContent(String useraccount, SenderDto senderDto, ReceiverDto receiverDto, List<ClothDto> clothdtos);
 	
 	public List<ContentDto> getContents(String useraccount);
 }

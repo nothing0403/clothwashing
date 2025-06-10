@@ -11,16 +11,20 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ReceiverDto {
 
-	@NotNull(message = "{receiverDto.senderName.notNull}")
-	@Size(min = 1, message = "{receiverDto.senderName.size}")
+	@NotNull(message = "{receiverDto.receiverName.notNull}")
+	@Size(min = 1, message = "{receiverDto.receiverName.size}")
     private String receiverName;
 	
-	@NotNull(message = "{receiverDto.senderPhone.notNull}")
-	@Size(min = 1, message = "{receiverDto.senderPhone.size}")
+	@NotNull(message = "{receiverDto.receiverPhone.notNull}")
+	@Size(min = 1, message = "{receiverDto.receiverPhone.size}")
 	private String receiverPhone;
 	
-	@NotNull(message = "{receiverDto.senderAddress.notNull}")
-	@Size(min = 1, message = "{receiverDto.senderAddress.size}")
+	@NotNull(message = "{receiverDto.receiverAddress.notNull}")
+	@Size(min = 1, message = "{receiverDto.receiverAddress.size}")
 	private String receiverAddress;
+	
+	@NotNull(message = "{receiverDto.receiverDate.notNull}")
+	@Size(min = 1, message = "{receiverDto.receiverDate.size}")
+	private String receiverDate;
 
 }

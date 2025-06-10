@@ -7,17 +7,15 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.entity.Content;
-import com.example.demo.model.entity.Receiver;
-import com.example.demo.model.entity.Sender;
 
 @Repository
 public interface ContentRepository extends JpaRepository<Content, Integer>{
-    
-	@Query(value = "select * from content where user_id = :userId", nativeQuery = true)
-	List<Content> findByUserId(Integer userId);
 	
-	@Query(value = "select * from content where user_name = :userName", nativeQuery = true)
-	List<Content> findByUserName(String userName);
+	@Query(value = "select * from content where user_account = :userAccount", nativeQuery = true)
+	List<Content> findByUserAccount(String userAccount);
+	
+	@Query(value = "select * from content where content_build_date = :contentBuildDate", nativeQuery = true)
+	Content findByContentBuildDate(String contentBuildDate);
 	
 	@Query(value = "select * from content where receiver_id = :receiverId", nativeQuery = true)
 	Content findByReceiverId(Integer receiverId);

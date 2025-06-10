@@ -22,5 +22,9 @@ public class SenderDto {
 	@NotNull(message = "{senderDto.senderAddress.notNull}")
 	@Size(min = 1, message = "{senderDto.senderAddress.size}")
 	private String senderAddress; 
+	
+	@NotNull(message = "{senderDto.senderDate.notNull}")
+	@Size(min = 1, message = "{senderDto.senderDate.size}")
+	private String senderDate;
 
 }

@@ -31,14 +31,9 @@ public class ReceiverServiceImpl implements ReceiverService{
 	}
 
 	@Override
-	public void addReceiver(String name, String phone, String address, String date) {
+	public void addReceiver(ReceiverDto receiverDto) {
 		
-		Receiver receiver = new Receiver();
-		
-		receiver.setReceiverName(name);
-		receiver.setReceiverPhone(phone);
-		receiver.setReceiverAddress(address);
-		receiver.setReceiverDate(date);
+		Receiver receiver = mapToDto.dtoToReceiver(receiverDto);
 		
 		receiverRepository.save(receiver);
 	}

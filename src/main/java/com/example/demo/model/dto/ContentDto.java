@@ -11,6 +11,9 @@ import lombok.NoArgsConstructor;
 public class ContentDto {
 
 	@NotNull(message = "{contentDto.contentBuildTime.notNull}")
+	private Integer userId;
+	
+	@NotNull(message = "{contentDto.contentBuildTime.notNull}")
 	private String contentBuildTime;
 	
 	@NotNull(message = "{contentDto.receiveTime.notNull}")

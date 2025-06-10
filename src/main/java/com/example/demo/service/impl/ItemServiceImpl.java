@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.mapper.MapToDto;
+import com.example.demo.model.dto.ClothDto;
 import com.example.demo.model.dto.ItemDto;
 import com.example.demo.model.entity.Cloth;
 import com.example.demo.model.entity.Content;
@@ -32,20 +33,14 @@ public class ItemServiceImpl implements ItemService{
 	private MapToDto mapToDto;
 
 	@Override
-	public void addItem(Integer quantity, Integer clothId, Integer contentId) {
+	public void addItem(ClothDto clothDto, Content content) {
 		
 		Item item = new Item();
 		
-		Cloth cloth = clothRepository.findByClothId(clothId);
-		Content content = contentRepository.findByContentId(contentId);
-		
-		Integer price = cloth.getClothPrice();
-		Integer itemPrice = price * quantity;
+		Cloth cloth = mapToDto.dtoToCloth(clothDto);
 		
 		item.setCloth(cloth);
 		item.setContent(content);
-		item.setItemQuantity(quantity);
-		item.setItemPrice(itemPrice);
 		item.setItemState(false);
 		
 		itemRepository.save(item);

@@ -6,5 +6,5 @@ public interface SenderService {
 
 public SenderDto getSender(Integer id);
 	
-public void addSender(String name, String phone, String address, String date);
+public void addSender(SenderDto senderDto);
 }

@@ -31,14 +31,9 @@ public class SenderServiceImpl implements SenderService{
 	}
 
 	@Override
-	public void addSender(String name, String phone, String address,String date) {
+	public void addSender(SenderDto senderDto) {
 		
-		Sender sender = new Sender();
-		
-		sender.setSenderName(name);
-		sender.setSenderPhone(phone);
-		sender.setSenderAddress(address);
-		sender.setSenderDate(date);
+		Sender sender = mapToDto.dtoToSender(senderDto);
 		
 		senderRepository.save(sender);
 	}
