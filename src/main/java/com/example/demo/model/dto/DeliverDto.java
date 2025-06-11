@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class DeliverDto {
 
-	ReceiverDto receiverDto;
+	private ReceiverDto receiverDto;
 	
-	SenderDto senderDto;
+	private SenderDto senderDto;
 }

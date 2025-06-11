@@ -31,6 +31,6 @@ public class ClothDto {
 	@NotNull(message = "{clothDto.clothQuantity.notNull}")
 	private Integer clothQuantity = 0;
 
-	@NotNull(message = "{clothDto.itemPrice.notNull}")
-	private Integer ItemPrice = 0;
+	/*@NotNull(message = "{clothDto.itemPrice.notNull}")
+	private Integer ItemPrice = 0;*/
 }

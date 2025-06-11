@@ -37,6 +37,9 @@ public class ItemServiceImpl implements ItemService{
 		
 		Item item = new Item();
 		
+		item.setItemPrice(clothDto.getClothPrice()*clothDto.getClothQuantity());
+		item.setItemQuantity(clothDto.getClothQuantity());
+		
 		Cloth cloth = mapToDto.dtoToCloth(clothDto);
 		
 		item.setCloth(cloth);

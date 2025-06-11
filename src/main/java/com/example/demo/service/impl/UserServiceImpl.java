@@ -40,7 +40,6 @@ public class UserServiceImpl implements UserService{
 		
 		user.setUserActive(true);
 		userRepository.save(user);
-		System.out.println(user);
 		
 		// 將 user 轉成 userDTO 並回傳
 		return mapToDto.userToDto(user);

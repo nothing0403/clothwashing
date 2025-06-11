@@ -26,6 +26,8 @@ import com.example.demo.repository.UserRepository;
 import com.example.demo.service.ContentService;
 import com.example.demo.service.ItemService;
 
+import jakarta.transaction.Transactional;
+
 @Service
 public class ContentServiceImpl implements ContentService{
 
@@ -48,6 +50,7 @@ public class ContentServiceImpl implements ContentService{
 	private MapToDto mapToDto;
 
 	@Override
+	@Transactional
 	public void addContent(String useraccount, SenderDto senderDto, ReceiverDto receiverDto, List<ClothDto> clothDtos) {
 		Content content = new Content();	
 		// 將 user 、 sender 、 receiver 的物件存放進 content，JPA 會自動生成對應外鍵
@@ -63,6 +66,7 @@ public class ContentServiceImpl implements ContentService{
 		// 訂單建立時間
 		LocalDateTime dateTime = LocalDateTime.now();
 		String dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		
 		content.setContentBuildDate(dateTimeStr);
 		content.setContentFinalDate(sender.getSenderDate());
 		content.setContentState(false);
@@ -74,9 +78,9 @@ public class ContentServiceImpl implements ContentService{
 	}
 
 	@Override
-	public List<ContentDto> getContents(String useraccount) {
+	public List<ContentDto> getContents(Integer userId) {
 		
-		List<Content> contents = contentRepository.findByUserAccount(useraccount);
+		List<Content> contents = contentRepository.findByUserId(userId);
 		
 		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
 	}

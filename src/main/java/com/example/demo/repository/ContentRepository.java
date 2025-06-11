@@ -11,8 +11,8 @@ import com.example.demo.model.entity.Content;
 @Repository
 public interface ContentRepository extends JpaRepository<Content, Integer>{
 	
-	@Query(value = "select * from content where user_account = :userAccount", nativeQuery = true)
-	List<Content> findByUserAccount(String userAccount);
+	@Query(value = "select * from content where user_Id = :userId", nativeQuery = true)
+	List<Content> findByUserId(Integer userId);
 	
 	@Query(value = "select * from content where content_build_date = :contentBuildDate", nativeQuery = true)
 	Content findByContentBuildDate(String contentBuildDate);

@@ -1,6 +1,7 @@
 package com.example.demo.controller;
 
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.example.demo.exception.PasswordErrorException;
 import com.example.demo.exception.UserNoFindException;
 import com.example.demo.model.dto.ClothDto;
+import com.example.demo.model.dto.ContentDto;
 import com.example.demo.model.dto.DeliverDto;
 import com.example.demo.model.dto.ReceiverDto;
 import com.example.demo.model.dto.SenderDto;
@@ -56,7 +58,7 @@ public class LoginRestController {
 	}
 	
 	@PostMapping("/deliver")
-	public ResponseEntity<ApiResponse<Object[]>> deliver(@RequestBody DeliverDto deliverDto, HttpSession session){
+	public ResponseEntity<ApiResponse<Void>> deliver(@RequestBody DeliverDto deliverDto, HttpSession session){
 		
 		session.setAttribute("deliverDto", deliverDto);
 		
@@ -77,6 +79,8 @@ public class LoginRestController {
 		UserDto userDto = (UserDto)session.getAttribute("userDto");
 		
 		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
+		
+		/*List<ContentDto> contentDtos = contentService.getContents(userDto.g);*/
 		
 		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}

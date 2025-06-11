@@ -12,5 +12,5 @@ public interface ContentService {
 
 	public void addContent(String useraccount, SenderDto senderDto, ReceiverDto receiverDto, List<ClothDto> clothdtos);
 	
-	public List<ContentDto> getContents(String useraccount);
+	public List<ContentDto> getContents(Integer userId);
 }
