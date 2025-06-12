@@ -8,7 +8,7 @@ import com.example.demo.model.entity.Content;
 
 public interface ItemService {
 	
-	public void addItem(ClothDto clothDto, Content content);
+	public void addItem(List<ClothDto> clothDtos, Content content);
 	
 	public List<ItemDto> getItems(Integer contentId);
 	

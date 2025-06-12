@@ -33,20 +33,21 @@ public class ItemServiceImpl implements ItemService{
 	private MapToDto mapToDto;
 
 	@Override
-	public void addItem(ClothDto clothDto, Content content) {
-		
-		Item item = new Item();
-		
-		item.setItemPrice(clothDto.getClothPrice()*clothDto.getClothQuantity());
-		item.setItemQuantity(clothDto.getClothQuantity());
-		
-		Cloth cloth = mapToDto.dtoToCloth(clothDto);
-		
-		item.setCloth(cloth);
-		item.setContent(content);
-		item.setItemState(false);
-		
-		itemRepository.save(item);
+	public void addItem(List<ClothDto> clothDtos, Content content) {
+	
+		clothDtos.stream().forEach(clothDto -> {
+			Item item = new Item();
+			item.setItemPrice(clothDto.getClothPrice()*clothDto.getClothQuantity());
+			item.setClothQuantity(clothDto.getClothQuantity());
+			
+			Cloth cloth = mapToDto.dtoToCloth(clothDto);
+			
+			item.setCloth(cloth);
+			item.setContent(content);
+			item.setItemState(false);
+			
+			itemRepository.save(item);
+		});
 	}
 
 	@Override

@@ -72,9 +72,7 @@ public class ContentServiceImpl implements ContentService{
 		content.setContentState(false);
 		content.setContentPrice(clothDtos.stream().mapToInt(clothDto -> clothDto.getClothPrice()*clothDto.getClothQuantity()).sum());
 		
-		contentRepository.save(content);
-		
-		clothDtos.stream().forEach(clothDto -> itemService.addItem(clothDto, contentRepository.findByContentBuildDate(dateTimeStr)));
+		itemService.addItem(clothDtos, contentRepository.save(content));
 	}
 
 	@Override

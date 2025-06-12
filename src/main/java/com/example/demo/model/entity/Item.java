@@ -7,6 +7,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -23,7 +24,7 @@ public class Item {
 	private Integer itemId;
 
 	@Column(nullable = false)
-	private Integer itemQuantity = 0;
+	private Integer clothQuantity = 0;
 	
 	@Column(nullable = false)
 	private Integer itemPrice;
@@ -35,7 +36,7 @@ public class Item {
 	@JoinColumn(name = "content_id")
 	private Content content;
 	
-	@OneToOne
+	@ManyToOne
 	@JoinColumn(name = "cloth_id")
 	private Cloth cloth;
 }

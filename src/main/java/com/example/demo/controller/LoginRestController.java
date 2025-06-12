@@ -49,6 +49,8 @@ public class LoginRestController {
 	@Autowired
 	private ContentService contentService;
 	
+	private boolean hasRender = false;
+	
 	@GetMapping("/home")
 	public ResponseEntity<ApiResponse<List<ClothDto>>> home(HttpSession session){
 		
@@ -67,6 +69,7 @@ public class LoginRestController {
 	
 	@GetMapping("/result")
 	public ResponseEntity<ApiResponse<Void>> result(HttpSession session){
+		if(hasRender)return ResponseEntity.ok(ApiResponse.success(null, null));
 		
 		List<ClothDto> clothDtos = (List<ClothDto>)session.getAttribute("clothDtos");
 		
@@ -78,9 +81,12 @@ public class LoginRestController {
 		
 		UserDto userDto = (UserDto)session.getAttribute("userDto");
 		
+		/*System.out.println("find out !!!!!!!!!!!!");*/
+		
 		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
 		
 		/*List<ContentDto> contentDtos = contentService.getContents(userDto.g);*/
+		hasRender = true;
 		
 		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}

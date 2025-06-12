@@ -1,10 +1,14 @@
 package com.example.demo.model.entity;
 
+import java.util.List;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -35,6 +39,6 @@ public class Cloth {
 	@Column(nullable = false)
 	private Integer clothPrice;
 
-	@OneToOne(mappedBy = "cloth")
-	private Item item;
+	@OneToMany(mappedBy = "cloth")
+	private List<Item> item;
 }
