@@ -68,7 +68,7 @@ public class ContentServiceImpl implements ContentService{
 		String dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
 		
 		content.setContentBuildDate(dateTimeStr);
-		content.setContentFinalDate(sender.getSenderDate());
+		content.setContentFinalDate(receiver.getReceiverDate());
 		content.setContentState(false);
 		content.setContentPrice(clothDtos.stream().mapToInt(clothDto -> clothDto.getClothPrice()*clothDto.getClothQuantity()).sum());
 		

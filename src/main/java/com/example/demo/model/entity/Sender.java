@@ -32,6 +32,9 @@ public class Sender {
 	@Column(length = 50, nullable = false)
 	private String senderDate;
 	
+	@Column(length = 50, nullable = false)
+	private String senderTimePeriod;
+	
 	@OneToOne(mappedBy = "sender")
 	private Content content;
 }
