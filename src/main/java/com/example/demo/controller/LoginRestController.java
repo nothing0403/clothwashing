@@ -1,10 +1,19 @@
 package com.example.demo.controller;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.Graphics;
+import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Random;
 import java.util.stream.Collectors;
 
+import javax.imageio.ImageIO;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -33,6 +42,7 @@ import com.example.demo.service.ReceiverService;
 import com.example.demo.service.SenderService;
 import com.example.demo.service.UserService;
 
+import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
@@ -50,6 +60,49 @@ public class LoginRestController {
 	private ContentService contentService;
 	
 	private boolean hasRender = false;
+	
+	private String authcode;
+	
+	private String generateAuthCode() {
+		String chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+		StringBuffer authcode = new StringBuffer();
+		Random random = new Random();
+		for(int i=0;i<4;i++) {
+			int index = random.nextInt(chars.length()); // 隨機取位置
+			authcode.append(chars.charAt(index)); // 取得該位置的資料
+		}
+		return authcode.toString();
+	}
+	
+	private BufferedImage getAuthCodeImage(String authcode) {
+		// 建立圖像區域(80x30 TGB)
+		BufferedImage img = new BufferedImage(80, 30, BufferedImage.TYPE_INT_RGB);
+		// 建立畫布
+		Graphics g = img.getGraphics();
+		// 設定顏色
+		g.setColor(Color.YELLOW);
+		// 塗滿背景
+		g.fillRect(0, 0, 80, 30); // 全區域
+		// 設定顏色
+		g.setColor(Color.BLACK);
+		// 設定字型
+		g.setFont(new Font("Segoe UI Emoji", Font.BOLD, 22)); // 字體, 風格, 大小
+		// 繪文字
+		g.drawString(authcode, 18, 22); // (18, 22) 表示繪文字左上角的起點
+		// 加上干擾線
+		g.setColor(Color.RED);
+		Random random = new Random();
+		for(int i=0;i<15;i++) {
+			// 座標點
+			int x1 = random.nextInt(80); // 0~79
+			int y1 = random.nextInt(30); // 0~29
+			int x2 = random.nextInt(80); // 0~79
+			int y2 = random.nextInt(30); // 0~29
+			// 繪直線
+			g.drawLine(x1, y1, x2, y2);
+		}
+		return img;
+	}
 	
 	@GetMapping("/home")
 	public ResponseEntity<ApiResponse<List<ClothDto>>> home(HttpSession session){
@@ -102,10 +155,27 @@ public class LoginRestController {
 		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}
 	
+	@GetMapping(value = "/captcha", produces = MediaType.IMAGE_JPEG_VALUE)
+	public void getCaptcha(HttpServletResponse response) throws IOException {
+	    authcode = generateAuthCode(); // 產生驗證碼文字
+	    BufferedImage image = getAuthCodeImage(authcode); // 產生圖片
+
+	    response.setHeader("Cache-Control", "no-cache");
+	    response.setHeader("Pragma", "no-cache");
+	    response.setDateHeader("Expires", 0);
+	    response.setContentType(MediaType.IMAGE_JPEG_VALUE);
+
+	    ImageIO.write(image, "JPEG", response.getOutputStream());
+	}
+	
 	@PostMapping("/login")
-	public ResponseEntity<ApiResponse<Void>> login(@RequestParam String useraccount, @RequestParam String userpassword, HttpSession session) throws UserNoFindException, PasswordErrorException{
+	public ResponseEntity<ApiResponse<Void>> login(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userauthcode, HttpSession session) throws UserNoFindException, PasswordErrorException{
 		
 		UserDto userDto = userService.getUser(useraccount, userpassword);
+		
+		if(!authcode.equals(userauthcode)) {
+			return ResponseEntity.ok(ApiResponse.success("驗證碼錯誤", null));
+		}
 		// 把使用者資訊存放進session
 		session.setAttribute("userDto", userDto);
 		
