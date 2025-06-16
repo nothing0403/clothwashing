@@ -115,6 +115,8 @@ public class LoginRestController {
 	@PostMapping("/deliver")
 	public ResponseEntity<ApiResponse<Void>> deliver(@RequestBody DeliverDto deliverDto, HttpSession session){
 		
+		System.out.println("where are you?");
+		
 		session.setAttribute("deliverDto", deliverDto);
 		
 		return ResponseEntity.ok(ApiResponse.success(null, null));
@@ -122,6 +124,7 @@ public class LoginRestController {
 	
 	@GetMapping("/result")
 	public ResponseEntity<ApiResponse<Void>> result(HttpSession session){
+		
 		if(hasRender)return ResponseEntity.ok(ApiResponse.success(null, null));
 		
 		List<ClothDto> clothDtos = (List<ClothDto>)session.getAttribute("clothDtos");
@@ -134,7 +137,7 @@ public class LoginRestController {
 		
 		UserDto userDto = (UserDto)session.getAttribute("userDto");
 		
-		/*System.out.println("find out !!!!!!!!!!!!");*/
+		System.out.println("find out !!!!!!!!!!!!");
 		
 		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
 		

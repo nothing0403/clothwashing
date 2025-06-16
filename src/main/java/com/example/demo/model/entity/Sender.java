@@ -35,6 +35,9 @@ public class Sender {
 	@Column(length = 50, nullable = false)
 	private String senderTimePeriod;
 	
+	@Column(length = 50, nullable = false)
+	private String senderPayment;
+	
 	@OneToOne(mappedBy = "sender")
 	private Content content;
 }

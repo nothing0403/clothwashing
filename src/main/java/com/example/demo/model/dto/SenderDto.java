@@ -31,4 +31,7 @@ public class SenderDto {
 	@Size(min = 1, message = "{senderDto.senderTimePeriod.size}")
 	private String senderTimePeriod;
 
+	@NotNull(message = "{senderDto.senderPayment.notNull}")
+	@Size(min = 1, message = "{senderDto.senderPayment.size}")
+	private String senderPayment;
 }
