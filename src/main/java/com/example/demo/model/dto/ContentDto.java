@@ -10,17 +10,14 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ContentDto {
 
-	@NotNull(message = "{contentDto.contentBuildTime.notNull}")
-	private Integer userId;
+	@NotNull(message = "{contentDto.contentId.notNull}")
+	private Integer contentId;
 	
-	@NotNull(message = "{contentDto.contentBuildTime.notNull}")
-	private String contentBuildTime;
+	@NotNull(message = "{contentDto.contentBuildDate.notNull}")
+	private String contentBuildDate;
 	
-	@NotNull(message = "{contentDto.receiveTime.notNull}")
-	private String receiveTime;
-	
-	@NotNull(message = "{contentDto.sendTime.notNull}")
-	private String sendTime;
+	@NotNull(message = "{contentDto.contentFinalDate.notNull}")
+	private String contentFinalDate;
 	
 	@NotNull(message = "{contentDto.contentState.notNull}")
 	private boolean contentState;

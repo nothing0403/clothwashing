@@ -23,9 +23,11 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.exception.PasswordErrorException;
 import com.example.demo.exception.UserNoFindException;
+import com.example.demo.model.dto.CartDto;
 import com.example.demo.model.dto.ClothDto;
 import com.example.demo.model.dto.ContentDto;
 import com.example.demo.model.dto.DeliverDto;
@@ -34,6 +36,7 @@ import com.example.demo.model.dto.SenderDto;
 import com.example.demo.model.dto.UserDto;
 import com.example.demo.model.entity.Content;
 import com.example.demo.model.entity.Receiver;
+import com.example.demo.model.entity.User;
 import com.example.demo.response.ApiResponse;
 import com.example.demo.service.ClothService;
 import com.example.demo.service.ContentService;
@@ -45,7 +48,7 @@ import com.example.demo.service.UserService;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-@Controller
+@RestController
 @RequestMapping("/rest")
 @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
 public class LoginRestController {
@@ -58,8 +61,6 @@ public class LoginRestController {
 	
 	@Autowired
 	private ContentService contentService;
-	
-	private boolean hasRender = false;
 	
 	private String authcode;
 	
@@ -115,17 +116,13 @@ public class LoginRestController {
 	@PostMapping("/deliver")
 	public ResponseEntity<ApiResponse<Void>> deliver(@RequestBody DeliverDto deliverDto, HttpSession session){
 		
-		System.out.println("where are you?");
-		
 		session.setAttribute("deliverDto", deliverDto);
 		
 		return ResponseEntity.ok(ApiResponse.success(null, null));
 	}	
 	
-	@GetMapping("/result")
-	public ResponseEntity<ApiResponse<Void>> result(HttpSession session){
-		
-		if(hasRender)return ResponseEntity.ok(ApiResponse.success(null, null));
+	@GetMapping("/cart")
+	public ResponseEntity<ApiResponse<CartDto>> cart(HttpSession session){
 		
 		List<ClothDto> clothDtos = (List<ClothDto>)session.getAttribute("clothDtos");
 		
@@ -134,17 +131,24 @@ public class LoginRestController {
 		ReceiverDto receiverDto = deliverDto.getReceiverDto();
 		
 		SenderDto senderDto = deliverDto.getSenderDto();
-		
-		UserDto userDto = (UserDto)session.getAttribute("userDto");
-		
-		System.out.println("find out !!!!!!!!!!!!");
-		
-		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
+//		
+//		UserDto userDto = (UserDto)session.getAttribute("userDto");
+//		
+//		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
 		
 		/*List<ContentDto> contentDtos = contentService.getContents(userDto.g);*/
-		hasRender = true;
 		
-		return ResponseEntity.ok(ApiResponse.success(null, null));
+//		List<ContentDto> contentDtos = contentService.getContents();
+		
+		CartDto cartDto = new CartDto();
+		
+		cartDto.setClothDtos(clothDtos);
+		
+		cartDto.setSenderDto(senderDto);
+		
+		cartDto.setReceiverDto(receiverDto);
+		
+		return ResponseEntity.ok(ApiResponse.success(null, cartDto));
 	}
 	
 	
@@ -172,13 +176,9 @@ public class LoginRestController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<ApiResponse<Void>> login(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userauthcode, HttpSession session) throws UserNoFindException, PasswordErrorException{
+	public ResponseEntity<ApiResponse<Void>> login(@RequestParam String useraccount, @RequestParam String userpassword, HttpSession session) throws UserNoFindException, PasswordErrorException{
 		
 		UserDto userDto = userService.getUser(useraccount, userpassword);
-		
-		if(!authcode.equals(userauthcode)) {
-			return ResponseEntity.ok(ApiResponse.success("驗證碼錯誤", null));
-		}
 		// 把使用者資訊存放進session
 		session.setAttribute("userDto", userDto);
 		

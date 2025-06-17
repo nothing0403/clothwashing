@@ -55,6 +55,9 @@ public class ContentServiceImpl implements ContentService{
 		Content content = new Content();	
 		// 將 user 、 sender 、 receiver 的物件存放進 content，JPA 會自動生成對應外鍵
 		
+		System.out.println("this is 0617");
+		System.out.println(clothDtos);
+		
 		User user = userRepository.findByUserAccount(useraccount);
 		Sender sender = senderRepository.save(mapToDto.dtoToSender(senderDto));
 		Receiver receiver = receiverRepository.save(mapToDto.dtoToReceiver(receiverDto));
@@ -79,6 +82,14 @@ public class ContentServiceImpl implements ContentService{
 	public List<ContentDto> getContents(Integer userId) {
 		
 		List<Content> contents = contentRepository.findByUserId(userId);
+		
+		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
+	}
+
+	@Override
+	public List<ContentDto> getContents() {
+		
+		List<Content> contents = contentRepository.findAll();
 		
 		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
 	}

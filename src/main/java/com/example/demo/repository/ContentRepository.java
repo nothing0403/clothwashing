@@ -25,4 +25,7 @@ public interface ContentRepository extends JpaRepository<Content, Integer>{
 	
 	@Query(value = "select * from content where content_id = :contentId", nativeQuery = true)
 	Content findByContentId(Integer contentId);
+	
+	@Query(value = "select * from content", nativeQuery = true)
+	List<Content> findAll();
 }
