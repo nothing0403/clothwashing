@@ -1,5 +1,7 @@
 package com.example.demo.model.dto;
 
+import java.util.List;
+
 import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -25,4 +27,9 @@ public class ContentDto {
 	@NotNull(message = "{contentDto.contentPrice.notNull}")
 	private Integer contentPrice;
 
+	private SenderDto senderDto;
+	
+	private ReceiverDto receiverDto;
+	
+	private List<ItemDto> itemDtos;
 }

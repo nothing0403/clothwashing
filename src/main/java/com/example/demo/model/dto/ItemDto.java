@@ -12,8 +12,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class ItemDto {
 	
-	@NotNull(message = "{itemDto.clothId.notNull}")
-	private Integer clothId;
+	@NotNull(message = "{itemDto.itemId.notNull}")
+	private Integer itemId;
 	
 	@NotNull(message = "{itemDto.itemQuantity.notNull}")
 	@Range(min = 1, max = 10, message = "{itemDto.itemQuantity.range}")
@@ -22,4 +22,8 @@ public class ItemDto {
 	@NotNull(message = "{itemDto.itemPrice.notNull}")
 	private Integer itemPrice;
 
+	@NotNull(message = "{itemDto.itemState.notNull}")
+	private boolean itemState;
+	
+	private ClothDto clothDto;
 }

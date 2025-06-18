@@ -116,14 +116,6 @@ public class LoginRestController {
 		ReceiverDto receiverDto = deliverDto.getReceiverDto();
 		
 		SenderDto senderDto = deliverDto.getSenderDto();
-//		
-//		UserDto userDto = (UserDto)session.getAttribute("userDto");
-//		
-//		contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
-		
-		/*List<ContentDto> contentDtos = contentService.getContents(userDto.g);*/
-		
-//		List<ContentDto> contentDtos = contentService.getContents();
 		
 		CartDto cartDto = new CartDto();
 		
@@ -141,9 +133,29 @@ public class LoginRestController {
 		
 		UserDto userDto = (UserDto)session.getAttribute("userDto");
 		
-		emailService.sendEmail(userDto.getUserAccount());
+        List<ClothDto> clothDtos = (List<ClothDto>)session.getAttribute("filterClothDtos");
 		
-		return ResponseEntity.ok(ApiResponse.success(null, null));
+		DeliverDto deliverDto = (DeliverDto)session.getAttribute("deliverDto");
+		
+		ReceiverDto receiverDto = deliverDto.getReceiverDto();
+		
+		SenderDto senderDto = deliverDto.getSenderDto();
+		
+		if(emailService.sendEmail(userDto.getUserAccount(), senderDto, receiverDto, clothDtos)) {
+			
+			contentService.addContent(userDto.getUserAccount(), senderDto, receiverDto, clothDtos);
+			
+			session.removeAttribute("clothDtos");
+			
+			session.removeAttribute("filterClothDtos");
+			
+			session.removeAttribute("deliverDto");
+			
+			return ResponseEntity.ok(ApiResponse.success(null, null));
+		}
+		else {
+			return ResponseEntity.ok(ApiResponse.success("200", null));
+		}
 	}
 	
 	@GetMapping(value = "/captcha", produces = MediaType.IMAGE_JPEG_VALUE)
