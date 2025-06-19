@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.example.demo.mapper.MapToDto;
 import com.example.demo.model.dto.ClothDto;
 import com.example.demo.model.dto.ContentDto;
+import com.example.demo.model.dto.ItemDto;
 import com.example.demo.model.dto.ReceiverDto;
 import com.example.demo.model.dto.SenderDto;
 import com.example.demo.model.dto.UserDto;
@@ -20,6 +21,7 @@ import com.example.demo.model.entity.Sender;
 import com.example.demo.model.entity.User;
 import com.example.demo.model.entity.Item;
 import com.example.demo.repository.ContentRepository;
+import com.example.demo.repository.ItemRepository;
 import com.example.demo.repository.ReceiverRepository;
 import com.example.demo.repository.SenderRepository;
 import com.example.demo.repository.UserRepository;
@@ -42,6 +44,9 @@ public class ContentServiceImpl implements ContentService{
 	
 	@Autowired
 	private SenderRepository senderRepository;
+	
+	@Autowired
+	private ItemRepository itemRepository;
 	
 	@Autowired
 	private ItemService itemService;
@@ -93,9 +98,9 @@ public class ContentServiceImpl implements ContentService{
 	}
 
 	@Override
-	public List<ContentDto> getContents(String receiverDate) {
+	public List<ContentDto> getContents(String receiveDate) {
 		
-        List<Content> contents = contentRepository.findByContentReceiveDate(receiverDate);
+        List<Content> contents = contentRepository.findByContentReceiveDate(receiveDate);
 		
 		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
 	}

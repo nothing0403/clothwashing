@@ -1,5 +1,8 @@
 package com.example.demo.mapper;
 
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
+
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -49,7 +52,16 @@ public class MapToDto {
 	}
 	
 	public ContentDto contentToDto(Content content) {
-		return modelMapper.map(content, ContentDto.class);
+		
+		ContentDto contentDto = modelMapper.map(content, ContentDto.class);
+		
+		contentDto.setItemDtos((content.getItems()).stream().map(item -> itemToDto(item)).collect(Collectors.toList()));
+		
+		contentDto.setReceiverDto(receiverToDto(content.getReceiver()));
+		
+		contentDto.setSenderDto(senderToDto(content.getSender()));
+		
+		return contentDto;
 	}
 	
 	public ClothDto clothToDto(Cloth cloth) {

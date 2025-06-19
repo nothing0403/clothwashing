@@ -30,4 +30,8 @@ public class UserDto {
 	@NotNull(message = "{userDto.userAddress.notNull}")
 	@Size(min = 1, max = 50, message = "{userDto.userAddress.size}")
 	private String userAddress;
+	
+	@NotNull(message = "{userDto.userRole.notNull}")
+	@Size(min = 1, max = 50, message = "{userDto.userRole.size}")
+	private String userRole;
 }

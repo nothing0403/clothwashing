@@ -17,7 +17,7 @@ public interface ContentRepository extends JpaRepository<Content, Integer>{
 	@Query(value = "select * from content where content_build_date = :contentBuildDate", nativeQuery = true)
 	Content findByContentBuildDate(String contentBuildDate);
 	
-	@Query(value = "select * from content where content_Receive_date = :contentReceiveDate", nativeQuery = true)
+	@Query(value = "select * from content where content_receive_date = :contentReceiveDate", nativeQuery = true)
 	List<Content> findByContentReceiveDate(String contentReceiveDate);
 	
 	@Query(value = "select * from content where receiver_id = :receiverId", nativeQuery = true)
