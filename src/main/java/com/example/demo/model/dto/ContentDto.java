@@ -18,8 +18,11 @@ public class ContentDto {
 	@NotNull(message = "{contentDto.contentBuildDate.notNull}")
 	private String contentBuildDate;
 	
-	@NotNull(message = "{contentDto.contentFinalDate.notNull}")
-	private String contentFinalDate;
+	@NotNull(message = "{contentDto.contentReceiveDate.notNull}")
+	private String contentReceiveDate;
+	
+	@NotNull(message = "{contentDto.contentSendDate.notNull}")
+	private String contentSendDate;
 	
 	@NotNull(message = "{contentDto.contentState.notNull}")
 	private boolean contentState;

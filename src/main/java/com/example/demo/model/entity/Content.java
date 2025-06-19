@@ -29,7 +29,10 @@ public class Content {
 	private String contentBuildDate;
 	
 	@Column(nullable = false)
-	private String contentFinalDate;
+	private String contentReceiveDate;
+	
+	@Column(nullable = false)
+	private String contentSendDate;
 	
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean contentState;

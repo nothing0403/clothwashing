@@ -66,7 +66,7 @@ public class EmailServiceImpl implements EmailService{
 				電話: %s
 				地址: %s	
 				收件日期: %s	
-				時段: %s	
+				收件時段: %s	
 				付款方式: %s
 				
 				收件人資料

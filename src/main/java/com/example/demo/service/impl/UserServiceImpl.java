@@ -7,6 +7,7 @@ import com.example.demo.exception.PasswordErrorException;
 import com.example.demo.exception.UserNoFindException;
 import com.example.demo.mapper.MapToDto;
 import com.example.demo.model.dto.UserDto;
+import com.example.demo.model.entity.Role;
 import com.example.demo.model.entity.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
@@ -62,7 +63,7 @@ public class UserServiceImpl implements UserService{
 		user.setUserPhone(phone);
 		user.setUserAddress(address);
 		// 目前先預設，後面要新增員工
-		//user.setUserRole("customer");
+//		user.setUserRole();
 		
 		userRepository.save(user);
 	}

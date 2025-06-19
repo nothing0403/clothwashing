@@ -78,6 +78,13 @@ public class LoginRestController {
 		return ResponseEntity.ok(ApiResponse.success(null, clothDtos));
 	}
 	
+	@GetMapping("/ordersearch")
+	public ResponseEntity<ApiResponse<List<ContentDto>>> ordersearch(@RequestParam String receiverDate){
+		List<ContentDto> contentDtos = contentService.getContents(receiverDate);
+		return ResponseEntity.ok(ApiResponse.success(null, contentDtos));
+	}
+	
+	
 	@PostMapping("/update")
 	public ResponseEntity<ApiResponse<Void>> update(@RequestBody List<ClothDto> clothDtos, HttpSession session){
 		
@@ -172,13 +179,15 @@ public class LoginRestController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<ApiResponse<Void>> login(@RequestParam String useraccount, @RequestParam String userpassword, HttpSession session) throws UserNoFindException, PasswordErrorException{
+	public ResponseEntity<ApiResponse<String>> login(@RequestParam String useraccount, @RequestParam String userpassword, HttpSession session) throws UserNoFindException, PasswordErrorException{
 		
 		UserDto userDto = userService.getUser(useraccount, userpassword);
 		// 把使用者資訊存放進session
 		session.setAttribute("userDto", userDto);
 		
-		return ResponseEntity.ok(ApiResponse.success("登入成功", null));
+		String username = userDto.getUserName();
+		
+		return ResponseEntity.ok(ApiResponse.success("登入成功", username));
 		
 	}
 	
