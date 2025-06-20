@@ -78,8 +78,18 @@ public class LoginRestController {
 		return ResponseEntity.ok(ApiResponse.success(null, clothDtos));
 	}
 	
-	@GetMapping("/ordersearch")
-	public ResponseEntity<ApiResponse<List<ContentDto>>> ordersearch(@RequestParam String receiveDate, HttpSession session){
+	@GetMapping("/contentlist")
+	public ResponseEntity<ApiResponse<UserDto>> findUserRole(HttpSession session){
+		
+		UserDto userDto = (UserDto)session.getAttribute("userDto");
+		
+		return ResponseEntity.ok(ApiResponse.success(null, userDto));
+	}
+	
+	@GetMapping("/contentlist/search")
+	public ResponseEntity<ApiResponse<List<ContentDto>>> search(@RequestParam String receiveDate, HttpSession session){
+		System.out.println(receiveDate);
+		
 		List<ContentDto> contentDtos = contentService.getContents(receiveDate);
 		return ResponseEntity.ok(ApiResponse.success(null, contentDtos));
 	}
@@ -161,7 +171,7 @@ public class LoginRestController {
 			return ResponseEntity.ok(ApiResponse.success(null, null));
 		}
 		else {
-			return ResponseEntity.ok(ApiResponse.success("200", null));
+			return ResponseEntity.ok(ApiResponse.success("400", null));
 		}
 	}
 	

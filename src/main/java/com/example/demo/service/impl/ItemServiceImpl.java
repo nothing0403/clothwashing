@@ -52,6 +52,7 @@ public class ItemServiceImpl implements ItemService{
 
 	@Override
 	public List<ItemDto> getItems(Integer contentId) {
+		
 		List<Item> items = itemRepository.findByContentId(contentId);
 		
 		return items.stream().map(item -> mapToDto.itemToDto(item)).collect(Collectors.toList());

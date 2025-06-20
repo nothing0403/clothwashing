@@ -1,5 +1,7 @@
 package com.example.demo.model.dto;
 
+import java.util.List;
+
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
@@ -11,6 +13,9 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class UserDto {
 
+	@NotNull(message = "{userDto.userId.notNull}")
+	private Integer userId;
+	
 	@NotNull(message = "{userDto.userName.notNull}")
 	@Size(min = 1, message = "{userDto.userName.size}")
 	private String userName;
@@ -34,4 +39,6 @@ public class UserDto {
 	@NotNull(message = "{userDto.userRole.notNull}")
 	@Size(min = 1, max = 50, message = "{userDto.userRole.size}")
 	private String userRole;
+	
+	private List<ContentDto> contentDtos;
 }

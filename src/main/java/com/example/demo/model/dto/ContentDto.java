@@ -29,7 +29,7 @@ public class ContentDto {
 	
 	@NotNull(message = "{contentDto.contentPrice.notNull}")
 	private Integer contentPrice;
-
+	
 	private SenderDto senderDto;
 	
 	private ReceiverDto receiverDto;

@@ -19,15 +19,34 @@ import com.example.demo.model.entity.Item;
 import com.example.demo.model.entity.Receiver;
 import com.example.demo.model.entity.Sender;
 import com.example.demo.model.entity.User;
+import com.example.demo.repository.ContentRepository;
+import com.example.demo.repository.ItemRepository;
+import com.example.demo.repository.UserRepository;
+
+import jakarta.transaction.Transactional;
 
 @Component
 public class MapToDto {
 	
 	@Autowired
 	private ModelMapper modelMapper;
-
+	
+	@Autowired
+	private ContentRepository contentRepository;
+	
+	@Autowired
+	private UserRepository userRepository;
+	
+	@Autowired
+	private ItemRepository itemRepository;
+	
 	public UserDto userToDto(User user) {
-		return modelMapper.map(user, UserDto.class);
+    	
+		UserDto userDto = modelMapper.map(user, UserDto.class);
+		
+		userDto.setContentDtos((user.getContents()).stream().map(content -> contentToDto(content)).collect(Collectors.toList()));
+		
+		return userDto;
 	}
 	public User dtoToUser(UserDto userDto) {
 		return modelMapper.map(userDto, User.class);
@@ -48,7 +67,16 @@ public class MapToDto {
 	}
 	
 	public ItemDto itemToDto(Item item) {
-		return modelMapper.map(item, ItemDto.class);
+		
+		ItemDto itemDto = modelMapper.map(item, ItemDto.class);
+		
+		itemDto.setClothDto(clothToDto(item.getCloth()));
+		
+		return itemDto;
+	}
+	
+	public Item dtoToItem(ItemDto itemDto) {
+		return modelMapper.map(itemDto, Item.class);
 	}
 	
 	public ContentDto contentToDto(Content content) {
@@ -62,6 +90,10 @@ public class MapToDto {
 		contentDto.setSenderDto(senderToDto(content.getSender()));
 		
 		return contentDto;
+	}
+	
+	public Content dtoToContent(ContentDto contentDto) {
+		return modelMapper.map(contentDto, Content.class);
 	}
 	
 	public ClothDto clothToDto(Cloth cloth) {

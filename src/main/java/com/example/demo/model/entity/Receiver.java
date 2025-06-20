@@ -34,6 +34,9 @@ public class Receiver {
 	@Column(length = 50, nullable = false)
 	private String receiverDate;
 	
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+	private boolean receiverState = false;
+	
 	@OneToMany(mappedBy = "receiver")
 	private List<Content> contents;
 }

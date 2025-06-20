@@ -10,6 +10,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ReceiverDto {
+	
+	@NotNull(message = "{receiverDto.receiverId.notNull}")
+	private Integer receiverId;
 
 	@NotNull(message = "{receiverDto.receiverName.notNull}")
 	@Size(min = 1, message = "{receiverDto.receiverName.size}")
@@ -26,5 +29,8 @@ public class ReceiverDto {
 	@NotNull(message = "{receiverDto.receiverDate.notNull}")
 	@Size(min = 1, message = "{receiverDto.receiverDate.size}")
 	private String receiverDate;
+	
+	@NotNull(message = "{receiverDto.receiverState.notNull}")
+	private boolean receiverState;
 
 }

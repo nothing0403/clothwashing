@@ -98,6 +98,7 @@ public class ContentServiceImpl implements ContentService{
 	}
 
 	@Override
+	@Transactional
 	public List<ContentDto> getContents(String receiveDate) {
 		
         List<Content> contents = contentRepository.findByContentReceiveDate(receiveDate);

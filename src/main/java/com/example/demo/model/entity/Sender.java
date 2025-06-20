@@ -32,6 +32,9 @@ public class Sender {
 	@Column(length = 50, nullable = false)
 	private String senderDate;
 	
+	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
+	private boolean senderState = false;
+	
 	@Column(length = 50, nullable = false)
 	private String senderTimePeriod;
 	
