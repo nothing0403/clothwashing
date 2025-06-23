@@ -41,7 +41,7 @@ public class User {
 	private String userAddress;
 	
 	@Column(length = 50, nullable = false)
-	private String userRole = "custome";
+	private String userRole = "driver";
 	
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean userActive;

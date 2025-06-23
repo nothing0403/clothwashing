@@ -5,6 +5,8 @@ import com.example.demo.model.dto.ReceiverDto;
 import com.example.demo.model.dto.SenderDto;
 import com.example.demo.service.EmailService;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Properties;
 import javax.mail.Message;
@@ -40,22 +42,31 @@ public class EmailServiceImpl implements EmailService{
 		
 		for(ClothDto clothDto : clothDtos) {
 			clothDetailBuilder.append(String.format(
-					"名稱: %s\n描述: %s\n價格: %d\t尺寸: %s\t數量: %d\n\n",
-					clothDto.getClothName(),
-					clothDto.getClothDescription(),
-					clothDto.getClothPrice(),
-					clothDto.getClothSize(),
-					clothDto.getClothQuantity()
+				"名稱: %s\n描述: %s\n價格: %d\t尺寸: %s\t數量: %d\n\n",
+				clothDto.getClothName(),
+				clothDto.getClothDescription(),
+				clothDto.getClothPrice(),
+				clothDto.getClothSize(),
+				clothDto.getClothQuantity()
 			));
 		}
 		
 		String clothDetail = clothDetailBuilder.toString();
+		
+		LocalDateTime dateTime = LocalDateTime.now();
+		String dateTimeStr = dateTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+		String[] dateTimeSpilt = dateTimeStr.split(" ");
+		String[] dateDetail = dateTimeSpilt[0].split("-");
+		
 		
 		String emailText = String.format( """
 				
 				您好，以下是本次的訂單資料，洗衣外送平台感謝您的光臨。
 				
 				衣物訂單
+				
+				日期: %s年%s月%s日
+				時間: %s
 				
 				%s
 				總金額: %d 元
@@ -77,6 +88,10 @@ public class EmailServiceImpl implements EmailService{
 				到件日期: %s
 				
 				""", 
+				dateDetail[0],
+				dateDetail[1],
+				dateDetail[2],
+				dateTimeSpilt[1],
 				clothDetail, 
 				clothDtos.stream().mapToInt(clothDto -> clothDto.getClothPrice()*clothDto.getClothQuantity()).sum(),
 				senderDto.getSenderName(),

@@ -8,8 +8,10 @@ public interface UserService {
 
 	public UserDto getUser(String useraccount, String userpassword) throws UserNoFindException, PasswordErrorException;
 	
+	public boolean updateUser(String useraccount, String userpassword) throws UserNoFindException, PasswordErrorException;
+	
 	public void addUser(String name, String email, String password, 
-			            String phone, String address);
+			            String phone, String address, String role);
 	
 	public void logoutUser(UserDto userDto);
 }

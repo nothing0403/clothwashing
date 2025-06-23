@@ -99,11 +99,42 @@ public class ContentServiceImpl implements ContentService{
 
 	@Override
 	@Transactional
-	public List<ContentDto> getContents(String receiveDate) {
+	public List<ContentDto> getContentsByReceiveDate(String receiveDate) {
 		
         List<Content> contents = contentRepository.findByContentReceiveDate(receiveDate);
 		
 		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
+	}
+	
+	@Override
+	@Transactional
+	public List<ContentDto> getContentsBySendDate(String sendDate) {
+		
+        List<Content> contents = contentRepository.findByContentSendDate(sendDate);
+		
+		return contents.stream().map(content -> mapToDto.contentToDto(content)).collect(Collectors.toList());
+	}
+	
+	public void updateContent(List<ContentDto> contentDtos) {
+		
+		for(ContentDto contentDto: contentDtos) {
+			
+			Content content = contentRepository.findByContentId(contentDto.getContentId());
+			
+			content.setContentState(contentDto.isContentState());
+			
+			List<ItemDto>itemDtos = contentDto.getItemDtos();
+			
+			for(ItemDto itemDto: itemDtos) {
+				Item item = itemRepository.findByItemId(itemDto.getItemId());
+				
+				item.setItemState(itemDto.isItemState());
+				
+				itemRepository.save(item);
+			}
+			
+			contentRepository.save(content);
+		}
 	}
 
 }

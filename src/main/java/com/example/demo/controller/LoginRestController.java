@@ -71,9 +71,9 @@ public class LoginRestController {
 	@GetMapping("/home")
 	public ResponseEntity<ApiResponse<List<ClothDto>>> home(HttpSession session){
 		
-		
 		List<ClothDto> clothDtos = session.getAttribute("clothDtos") == null? clothService.getCloth(): (List<ClothDto>)session.getAttribute("clothDtos");
 	
+		session.setAttribute("clothDtos", clothDtos);
 		
 		return ResponseEntity.ok(ApiResponse.success(null, clothDtos));
 	}
@@ -86,14 +86,29 @@ public class LoginRestController {
 		return ResponseEntity.ok(ApiResponse.success(null, userDto));
 	}
 	
-	@GetMapping("/contentlist/search")
-	public ResponseEntity<ApiResponse<List<ContentDto>>> search(@RequestParam String receiveDate, HttpSession session){
+	@GetMapping("/contentlist/receivedate_search")
+	public ResponseEntity<ApiResponse<List<ContentDto>>> receivedate_search(@RequestParam String receiveDate, HttpSession session){
 		System.out.println(receiveDate);
 		
-		List<ContentDto> contentDtos = contentService.getContents(receiveDate);
+		List<ContentDto> contentDtos = contentService.getContentsByReceiveDate(receiveDate);
 		return ResponseEntity.ok(ApiResponse.success(null, contentDtos));
 	}
 	
+	@GetMapping("/contentlist/senddate_search")
+	public ResponseEntity<ApiResponse<List<ContentDto>>> senddate_search(@RequestParam String sendDate, HttpSession session){
+		System.out.println(sendDate);
+		
+		List<ContentDto> contentDtos = contentService.getContentsBySendDate(sendDate);
+		return ResponseEntity.ok(ApiResponse.success(null, contentDtos));
+	}
+	
+	@PostMapping("/contentlist/content_update")
+	public ResponseEntity<ApiResponse<Void>> content_update(@RequestBody List<ContentDto> contentDtos, HttpSession session){
+		
+		contentService.updateContent(contentDtos);
+		
+		return ResponseEntity.ok(ApiResponse.success(null, null));
+	}
 	
 	@PostMapping("/update")
 	public ResponseEntity<ApiResponse<Void>> update(@RequestBody List<ClothDto> clothDtos, HttpSession session){
@@ -111,6 +126,8 @@ public class LoginRestController {
 	public ResponseEntity<ApiResponse<DeliverDto>> deliver(HttpSession session){
 		
 		DeliverDto deliverDto = session.getAttribute("deliverDto") == null? new DeliverDto(): (DeliverDto)session.getAttribute("deliverDto");
+		
+		session.setAttribute("deliverDto", deliverDto);
 		
 		return ResponseEntity.ok(ApiResponse.success(null, deliverDto));
 	}
@@ -189,15 +206,36 @@ public class LoginRestController {
 	}
 	
 	@PostMapping("/login")
-	public ResponseEntity<ApiResponse<UserDto>> login(@RequestParam String useraccount, @RequestParam String userpassword, HttpSession session) throws UserNoFindException, PasswordErrorException{
+	public ResponseEntity<ApiResponse<UserDto>> login(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userauthcode, HttpSession session) throws UserNoFindException, PasswordErrorException{
+		
+		if(!(userauthcode.equals(authcode))) {
+			return ResponseEntity.ok(ApiResponse.success("400", null));
+		}
 		
 		UserDto userDto = userService.getUser(useraccount, userpassword);
 		// 把使用者資訊存放進session
 		session.setAttribute("userDto", userDto);
 		
-		return ResponseEntity.ok(ApiResponse.success("登入成功", userDto));
+		session.removeAttribute("clothDtos");
 		
+		session.removeAttribute("filterClothDtos");
+		
+		session.removeAttribute("deliverDto");
+		
+		return ResponseEntity.ok(ApiResponse.success("登入成功", userDto));
 	}
+	
+	@PostMapping("/login/forget")
+	public ResponseEntity<ApiResponse<Void>> forget(@RequestParam String useraccount, @RequestParam String userpassword, HttpSession session) throws UserNoFindException, PasswordErrorException{
+		
+		if(userService.updateUser(useraccount, userpassword)) {
+			return ResponseEntity.ok(ApiResponse.success("密碼重設成功", null));
+		}
+		else {
+			return ResponseEntity.ok(ApiResponse.success("400", null));
+		}		
+	}
+	
 	
 	@PutMapping("/logout")
 	public ResponseEntity<ApiResponse<Void>> logout(HttpSession session){
@@ -205,6 +243,12 @@ public class LoginRestController {
 		UserDto userDto = (UserDto)session.getAttribute("userDto");
 		
 		userService.logoutUser(userDto);
+		
+        session.removeAttribute("clothDtos");
+		
+		session.removeAttribute("filterClothDtos");
+		
+		session.removeAttribute("deliverDto");
 		
 		return ResponseEntity.ok(ApiResponse.success("登出成功", null));
 	}
@@ -214,16 +258,28 @@ public class LoginRestController {
 	public ResponseEntity<ApiResponse<Void>> submit(@RequestParam String username, @RequestParam String useraccount, @RequestParam String userpassword, 
 			@RequestParam String userphone, @RequestParam String useraddress, HttpSession session){
 		
-		userService.addUser(username, useraccount, userpassword, userphone, useraddress);
+		String userrole = "customer";
+		
+		userService.addUser(username, useraccount, userpassword, userphone, useraddress, userrole);
 		
 		return ResponseEntity.ok(ApiResponse.success("註冊成功", null));
 	} 
+	
+	@PostMapping("/employee/submit")
+	public ResponseEntity<ApiResponse<Void>> employee_submit(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userrole){
+		
+		userService.addUser("", useraccount, userpassword, "", "", userrole);
+		
+		return ResponseEntity.ok(ApiResponse.success("註冊成功", null));
+	}
+	
 	
 	private String generateAuthCode() {
 		String chars = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
 		StringBuffer authcode = new StringBuffer();
 		Random random = new Random();
-		for(int i=0;i<4;i++) {
+		double number = Math.floor(Math.random()*2)+4;
+		for(int i=0;i<number;i++) {
 			int index = random.nextInt(chars.length()); // 隨機取位置
 			authcode.append(chars.charAt(index)); // 取得該位置的資料
 		}
@@ -232,31 +288,33 @@ public class LoginRestController {
 	
 	private BufferedImage getAuthCodeImage(String authcode) {
 		// 建立圖像區域(80x30 TGB)
-		BufferedImage img = new BufferedImage(80, 30, BufferedImage.TYPE_INT_RGB);
+		BufferedImage img = new BufferedImage(100, 30, BufferedImage.TYPE_INT_RGB);
 		// 建立畫布
 		Graphics g = img.getGraphics();
+		
+		Random random = new Random();
 		// 設定顏色
-		g.setColor(Color.YELLOW);
 		// 塗滿背景
-		g.fillRect(0, 0, 80, 30); // 全區域
+		g.fillRect(0, 0, 100, 30); // 全區域
 		// 設定顏色
-		g.setColor(Color.BLACK);
+		g.setColor(new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
 		// 設定字型
 		g.setFont(new Font("Segoe UI Emoji", Font.BOLD, 22)); // 字體, 風格, 大小
 		// 繪文字
 		g.drawString(authcode, 18, 22); // (18, 22) 表示繪文字左上角的起點
 		// 加上干擾線
-		g.setColor(Color.RED);
-		Random random = new Random();
+		g.setColor(new Color(random.nextInt(256), random.nextInt(256), random.nextInt(256)));
+		
 		for(int i=0;i<15;i++) {
 			// 座標點
-			int x1 = random.nextInt(80); // 0~79
+			int x1 = random.nextInt(100); // 0~79
 			int y1 = random.nextInt(30); // 0~29
-			int x2 = random.nextInt(80); // 0~79
+			int x2 = random.nextInt(100); // 0~79
 			int y2 = random.nextInt(30); // 0~29
 			// 繪直線
 			g.drawLine(x1, y1, x2, y2);
 		}
 		return img;
+		
 	}
 }

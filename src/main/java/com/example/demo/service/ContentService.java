@@ -14,7 +14,11 @@ public interface ContentService {
 	
 	public List<ContentDto> getContents(Integer userId);
 	
-	public List<ContentDto> getContents(String receiveDate);
+	public List<ContentDto> getContentsByReceiveDate(String receiveDate);
+	
+	public List<ContentDto> getContentsBySendDate(String sendDate);
 	
 	public List<ContentDto> getContents();
+	
+	public void updateContent(List<ContentDto> contentDtos);
 }

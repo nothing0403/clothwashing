@@ -1,13 +1,13 @@
 package com.example.demo.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
+
 import org.springframework.stereotype.Service;
 
 import com.example.demo.exception.PasswordErrorException;
 import com.example.demo.exception.UserNoFindException;
 import com.example.demo.mapper.MapToDto;
 import com.example.demo.model.dto.UserDto;
-import com.example.demo.model.entity.Role;
 import com.example.demo.model.entity.User;
 import com.example.demo.repository.UserRepository;
 import com.example.demo.service.UserService;
@@ -45,9 +45,30 @@ public class UserServiceImpl implements UserService{
 		// 將 user 轉成 userDTO 並回傳
 		return mapToDto.userToDto(user);
 	}
+	
+	@Override
+	@Transactional
+	public boolean updateUser(String useraccount, String userpassword) throws UserNoFindException, PasswordErrorException{
+		// useraccount 是唯一值
+		
+		User user = userRepository.findByUserAccount(useraccount);
+		
+		if(user == null) {
+			return false;
+		}
+		else {
+			String salt = Hash.getSalt();
+			user.setUserSalt(salt);
+			String passwordHash = Hash.getHash(userpassword, salt);
+			user.setUserPassword(passwordHash);
+			
+			return true;
+		}
+	}
+	
 
 	@Override
-	public void addUser(String name, String account, String password, String phone, String address) {
+	public void addUser(String name, String account, String password, String phone, String address, String role ) {
 		
 		User user = new User();
 		
@@ -63,7 +84,7 @@ public class UserServiceImpl implements UserService{
 		user.setUserPhone(phone);
 		user.setUserAddress(address);
 		// 目前先預設，後面要新增員工
-//		user.setUserRole();
+		user.setUserRole(role);
 		
 		userRepository.save(user);
 	}
