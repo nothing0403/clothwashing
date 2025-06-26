@@ -52,7 +52,7 @@ import jakarta.servlet.http.HttpSession;
 @RestController
 @RequestMapping("/rest")
 @CrossOrigin(origins = "http://localhost:5173", allowCredentials = "true")
-public class LoginRestController {
+public class ClothRestController {
 	
 	@Autowired
 	private UserService userService;
@@ -209,7 +209,7 @@ public class LoginRestController {
 	public ResponseEntity<ApiResponse<UserDto>> login(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userauthcode, HttpSession session) throws UserNoFindException, PasswordErrorException{
 		
 		if(!(userauthcode.equals(authcode))) {
-			return ResponseEntity.ok(ApiResponse.success("400", null));
+			return ResponseEntity.ok(ApiResponse.error(400, null));
 		}
 		
 		UserDto userDto = userService.getUser(useraccount, userpassword);
@@ -232,8 +232,27 @@ public class LoginRestController {
 			return ResponseEntity.ok(ApiResponse.success("密碼重設成功", null));
 		}
 		else {
-			return ResponseEntity.ok(ApiResponse.success("400", null));
+			return ResponseEntity.ok(ApiResponse.error(400, "密碼重設失敗"));
 		}		
+	}
+	
+	@GetMapping("/getUserInfo")
+	public ResponseEntity<ApiResponse<String>> getUserInfo(HttpSession session) {
+	    UserDto userDto = (UserDto)session.getAttribute("userDto");
+	    if (userDto != null) {
+	        return ResponseEntity.ok(ApiResponse.success("使用者已登入", userDto.getUserName()));
+	    } else {
+	        return ResponseEntity.ok(ApiResponse.error(400, "尚未登入"));
+	    }
+	}
+	
+	@GetMapping("/getUserClothInfo")
+	public ResponseEntity<ApiResponse<List<ClothDto>>> getUserClothInfo(HttpSession session) {
+	    
+		List<ClothDto> clothDtos = (List<ClothDto>)session.getAttribute("filterClothDtos");
+
+	    return ResponseEntity.ok(ApiResponse.success("使用者已登入", clothDtos));
+	   
 	}
 	
 	
@@ -249,6 +268,8 @@ public class LoginRestController {
 		session.removeAttribute("filterClothDtos");
 		
 		session.removeAttribute("deliverDto");
+		
+		session.removeAttribute("userDto");
 		
 		return ResponseEntity.ok(ApiResponse.success("登出成功", null));
 	}
