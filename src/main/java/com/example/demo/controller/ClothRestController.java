@@ -7,6 +7,7 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Random;
 import java.util.stream.Collectors;
 
@@ -208,6 +209,12 @@ public class ClothRestController {
 	@PostMapping("/login")
 	public ResponseEntity<ApiResponse<UserDto>> login(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userauthcode, HttpSession session) throws UserNoFindException, PasswordErrorException{
 		
+		User user = userService.getUser(useraccount);
+		
+		if(!user.isVerified()) {
+			return ResponseEntity.ok(ApiResponse.error(400, null));
+		}
+		
 		if(!(userauthcode.equals(authcode))) {
 			return ResponseEntity.ok(ApiResponse.error(400, null));
 		}
@@ -279,17 +286,36 @@ public class ClothRestController {
 	public ResponseEntity<ApiResponse<Void>> submit(@RequestParam String username, @RequestParam String useraccount, @RequestParam String userpassword, 
 			@RequestParam String userphone, @RequestParam String useraddress, HttpSession session){
 		
-		String userrole = "customer";
+	    String token = emailService.verifyEmail(useraccount);
+	    
+	    if(token != null) {
+	    	String userrole = "customer";
+			
+			userService.addUser(username, useraccount, userpassword, userphone, useraddress, userrole, token);
+			
+			return ResponseEntity.ok(ApiResponse.success("寄信成功", null));
+	    }
+		else {
+			return ResponseEntity.ok(ApiResponse.error(400, "寄信失敗"));
+		}
+	} 
+
+	@GetMapping("/submit/verify")
+	public void submitVerify(@RequestParam("token") String token, HttpServletResponse response) throws IOException{
 		
-		userService.addUser(username, useraccount, userpassword, userphone, useraddress, userrole);
-		
-		return ResponseEntity.ok(ApiResponse.success("註冊成功", null));
+		if(userService.verifyUser(token)) {
+			
+			response.sendRedirect("http://localhost:5173/login");
+		}
+		else {
+			response.sendRedirect("http://localhost:5173/submit");
+		}
 	} 
 	
 	@PostMapping("/employee/submit")
 	public ResponseEntity<ApiResponse<Void>> employee_submit(@RequestParam String useraccount, @RequestParam String userpassword, @RequestParam String userrole){
 		
-		userService.addUser("", useraccount, userpassword, "", "", userrole);
+		userService.addEmployee("", useraccount, userpassword, "", "", userrole);
 		
 		return ResponseEntity.ok(ApiResponse.success("註冊成功", null));
 	}

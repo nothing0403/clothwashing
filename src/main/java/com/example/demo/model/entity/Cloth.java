@@ -34,7 +34,7 @@ public class Cloth {
 	private String clothImg;
 	
 	@Column(length=50, nullable = false)
-	private String clothSize;
+	private String clothKind;
 	
 	@Column(nullable = false)
 	private Integer clothPrice;

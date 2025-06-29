@@ -41,7 +41,11 @@ public class User {
 	private String userAddress;
 	
 	@Column(length = 50, nullable = false)
-	private String userRole = "driver";
+	private String userRole;
+	
+	private boolean verified; // 是否已驗證信箱
+	
+    private String verifyToken; // 信箱驗證 token
 	
 	@Column(nullable = false, columnDefinition = "BOOLEAN DEFAULT FALSE")
 	private boolean userActive;

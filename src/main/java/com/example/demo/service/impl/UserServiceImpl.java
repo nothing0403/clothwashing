@@ -48,6 +48,12 @@ public class UserServiceImpl implements UserService{
 	
 	@Override
 	@Transactional
+	public User getUser(String useraccount) {
+		return userRepository.findByUserAccount(useraccount);
+	}
+	
+	@Override
+	@Transactional
 	public boolean updateUser(String useraccount, String userpassword) throws UserNoFindException, PasswordErrorException{
 		// useraccount 是唯一值
 		
@@ -68,7 +74,7 @@ public class UserServiceImpl implements UserService{
 	
 
 	@Override
-	public void addUser(String name, String account, String password, String phone, String address, String role ) {
+	public void addUser(String name, String account, String password, String phone, String address, String role, String token ) {
 		
 		User user = new User();
 		
@@ -83,8 +89,11 @@ public class UserServiceImpl implements UserService{
 		
 		user.setUserPhone(phone);
 		user.setUserAddress(address);
-		// 目前先預設，後面要新增員工
+		
 		user.setUserRole(role);
+		
+		user.setVerified(false);
+		user.setVerifyToken(token);
 		
 		userRepository.save(user);
 	}
@@ -94,8 +103,51 @@ public class UserServiceImpl implements UserService{
 		if(userDto != null) {
 			User user = userRepository.findByUserAccount(userDto.getUserAccount());
 			user.setUserActive(false);
+			user.setVerified(false);
 			userRepository.save(user);
 		}
+	}
+
+	@Override
+	public boolean verifyUser(String token) {
+		
+		User user = userRepository.findByVerifyToken(token);
+		
+		if(user != null) {
+			
+			user.setVerified(true);
+			
+			user.setVerifyToken(null);
+			
+			userRepository.save(user);
+			
+			return true;
+		}
+		else {
+			return false;
+		}
+	}
+
+	@Override
+	public void addEmployee(String name, String account, String password, String phone, String address, String role) {
+        User user = new User();
+		
+		user.setUserName(name);
+		user.setUserAccount(account);
+		
+		String salt = Hash.getSalt();
+		user.setUserSalt(salt);
+		
+		String passwordHash = Hash.getHash(password, salt);
+		user.setUserPassword(passwordHash);
+		
+		user.setUserPhone(phone);
+		user.setUserAddress(address);
+		
+		user.setUserRole(role);
+		
+		userRepository.save(user);
+		
 	}
 	
 }

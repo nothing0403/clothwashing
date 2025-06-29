@@ -9,4 +9,6 @@ import com.example.demo.model.dto.SenderDto;
 public interface EmailService {
 
 	public boolean sendEmail(String userAccount, SenderDto senderDto, ReceiverDto receiverDto, List<ClothDto>clothDtos);
+	
+	public String verifyEmail(String userAccount);
 }

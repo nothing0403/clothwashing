@@ -6,6 +6,7 @@ import org.springframework.stereotype.Repository;
 
 import com.example.demo.model.entity.User;
 import java.util.List;
+import java.util.Optional;
 
 
 @Repository
@@ -17,4 +18,7 @@ public interface UserRepository extends JpaRepository<User, Integer>{
 	
 	@Query(value = "select * from user where user_id = :userId", nativeQuery = true)
 	User findByUserId(Integer userId);
+	
+	@Query(value = "select * from user where verify_token = :token", nativeQuery = true)
+	User findByVerifyToken(String token);
 }

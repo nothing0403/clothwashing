@@ -22,8 +22,8 @@ public class ClothDto {
 	@NotNull(message = "{clothDto.clothImg.notNull}")
 	private String clothImg;
 	
-	@NotNull(message = "{clothDto.clothSize.notNull}")
-	private String clothSize;
+	@NotNull(message = "{clothDto.clothKind.notNull}")
+	private String clothKind;
 	
 	@NotNull(message = "{clothDto.clothPrice.notNull}")
 	private Integer clothPrice;

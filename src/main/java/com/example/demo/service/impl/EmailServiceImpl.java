@@ -9,6 +9,8 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Properties;
+import java.util.UUID;
+
 import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.PasswordAuthentication;
@@ -32,21 +34,20 @@ public class EmailServiceImpl implements EmailService{
 	// 寄件者的電子郵件地址
 	String from = "ladeplatoffice@gmail.com";
 	
+	// 使用 Gmail SMTP 伺服器
+	String host = "smtp.gmail.com";
+	
 	// to: // 收件者的電子郵件地址
 	public boolean sendEmail(String userAccount, SenderDto senderDto, ReceiverDto receiverDto, List<ClothDto>clothDtos) {
 
-		// 使用 Gmail SMTP 伺服器
-		String host = "smtp.gmail.com";
-		
 		StringBuilder clothDetailBuilder = new StringBuilder();
 		
 		for(ClothDto clothDto : clothDtos) {
 			clothDetailBuilder.append(String.format(
-				"名稱: %s\n描述: %s\n價格: %d\t尺寸: %s\t數量: %d\n\n",
+				"名稱: %s\n描述: %s\n價格: %d\t數量: %d\n\n",
 				clothDto.getClothName(),
 				clothDto.getClothDescription(),
 				clothDto.getClothPrice(),
-				clothDto.getClothSize(),
 				clothDto.getClothQuantity()
 			));
 		}
@@ -151,5 +152,57 @@ public class EmailServiceImpl implements EmailService{
 			
 			return false;
 		}
+	}
+
+	@Override
+	public String verifyEmail(String userAccount) {
+
+	    // 產生驗證用 token（可存在資料庫或暫存）
+	    String token = UUID.randomUUID().toString();
+
+	    // 設計你的驗證連結
+	    String verifyUrl = "http://localhost:8081/rest/submit/verify?token=" + token;
+
+	    // Email 內容（HTML 版本）
+	    String emailContent = String.format("""
+	        <p>您好，</p>
+	        <p>感謝您註冊本平台，請點擊以下連結以完成信箱驗證：</p>
+	        <p><a href="%s">%s</a></p>
+	        <p>如您未申請驗證，請忽略此封信件。</p>
+	        """, verifyUrl, verifyUrl);
+
+	    // 設定 mail 屬性
+	    Properties props = new Properties();
+	    props.put("mail.smtp.auth", "true");
+	    props.put("mail.smtp.starttls.enable", "true");
+	    props.put("mail.smtp.host", host);
+	    props.put("mail.smtp.port", "587");
+
+	    // 建立 session
+	    Session session = Session.getInstance(props, new javax.mail.Authenticator() {
+	        protected PasswordAuthentication getPasswordAuthentication() {
+	            return new PasswordAuthentication(from, googleAppPassword);
+	        }
+	    });
+
+	    try {
+	        Message message = new MimeMessage(session);
+	        message.setFrom(new InternetAddress(from));
+	        message.setRecipients(Message.RecipientType.TO, InternetAddress.parse(userAccount));
+	        message.setSubject("帳號驗證信 - Laundry Delivery Platform");
+	        message.setContent(emailContent, "text/html; charset=utf-8"); // 使用 HTML 格式
+
+	        Transport.send(message);
+
+	        // ✅ 實際應用中：儲存 token 與信箱的對應關係到資料庫以供驗證
+	        // e.g. emailTokenRepository.save(new EmailToken(userAccount, token));
+
+	        System.out.println("驗證信寄送成功：" + userAccount);
+	        return token;
+
+	    } catch (MessagingException e) {
+	        System.out.println("驗證信寄送失敗：" + e.getMessage());
+	        return null;
+	    }
 	}
 }

@@ -1,37 +1,37 @@
-2025-06-25T03:08:14.018+08:00  INFO 14756 --- [ClothWashing] [RMI TCP Connection(623)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-06-25T03:08:14.154+08:00  INFO 14756 --- [ClothWashing] [RMI TCP Connection(623)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-25T03:08:14.172+08:00  INFO 14756 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-25T03:08:14.210+08:00  INFO 14756 --- [ClothWashing] [RMI TCP Connection(623)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T03:08:14.239+08:00  INFO 14756 --- [ClothWashing] [RMI TCP Connection(623)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-25T03:08:14.247+08:00  INFO 14756 --- [ClothWashing] [RMI TCP Connection(623)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-25T03:08:18.366+08:00  INFO 932 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 932 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
-2025-06-25T03:08:18.367+08:00  INFO 932 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-25T03:08:19.386+08:00  INFO 932 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T03:08:19.389+08:00  INFO 932 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2025-06-25T03:08:19.435+08:00  INFO 932 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T03:08:19.437+08:00  INFO 932 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T03:08:19.438+08:00  INFO 932 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T03:08:19.439+08:00  INFO 932 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T03:08:19.440+08:00  INFO 932 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T03:08:19.441+08:00  INFO 932 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T03:08:19.442+08:00  INFO 932 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 0 JDBC repository interfaces.
-2025-06-25T03:08:19.458+08:00  INFO 932 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T03:08:19.462+08:00  INFO 932 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-25T03:08:19.506+08:00  INFO 932 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 6 JPA repository interfaces.
-2025-06-25T03:08:20.163+08:00  INFO 932 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-06-25T03:08:20.180+08:00  INFO 932 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-25T03:08:20.181+08:00  INFO 932 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-25T03:08:20.486+08:00  INFO 932 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-06-25T03:08:20.493+08:00  INFO 932 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-25T03:08:20.494+08:00  INFO 932 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2066 ms
-2025-06-25T03:08:20.718+08:00  INFO 932 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-25T03:08:20.867+08:00  INFO 932 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-25T03:08:20.915+08:00  INFO 932 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-25T03:08:21.313+08:00  INFO 932 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-25T03:08:21.354+08:00  INFO 932 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-25T03:08:21.565+08:00  INFO 932 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3caf5c96
-2025-06-25T03:08:21.568+08:00  INFO 932 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-25T03:08:21.775+08:00  INFO 932 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-29T03:12:39.230+08:00  INFO 13624 --- [ClothWashing] [RMI TCP Connection(322)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T03:12:39.285+08:00  INFO 13624 --- [ClothWashing] [RMI TCP Connection(322)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T03:12:39.298+08:00  INFO 13624 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T03:12:39.346+08:00  INFO 13624 --- [ClothWashing] [RMI TCP Connection(322)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:12:39.361+08:00  INFO 13624 --- [ClothWashing] [RMI TCP Connection(322)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T03:12:39.364+08:00  INFO 13624 --- [ClothWashing] [RMI TCP Connection(322)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T03:12:42.310+08:00  INFO 13488 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 13488 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T03:12:42.313+08:00  INFO 13488 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T03:12:43.231+08:00  INFO 13488 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:12:43.233+08:00  INFO 13488 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T03:12:43.275+08:00  INFO 13488 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:12:43.277+08:00  INFO 13488 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:12:43.278+08:00  INFO 13488 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:12:43.279+08:00  INFO 13488 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:12:43.280+08:00  INFO 13488 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:12:43.281+08:00  INFO 13488 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:12:43.282+08:00  INFO 13488 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 42 ms. Found 0 JDBC repository interfaces.
+2025-06-29T03:12:43.296+08:00  INFO 13488 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:12:43.298+08:00  INFO 13488 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T03:12:43.343+08:00  INFO 13488 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 6 JPA repository interfaces.
+2025-06-29T03:12:43.907+08:00  INFO 13488 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T03:12:43.924+08:00  INFO 13488 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T03:12:43.924+08:00  INFO 13488 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T03:12:44.196+08:00  INFO 13488 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T03:12:44.203+08:00  INFO 13488 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T03:12:44.203+08:00  INFO 13488 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1840 ms
+2025-06-29T03:12:44.417+08:00  INFO 13488 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T03:12:44.538+08:00  INFO 13488 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T03:12:44.582+08:00  INFO 13488 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T03:12:44.944+08:00  INFO 13488 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T03:12:44.981+08:00  INFO 13488 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T03:12:45.168+08:00  INFO 13488 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@173b1af1
+2025-06-29T03:12:45.170+08:00  INFO 13488 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T03:12:45.265+08:00  INFO 13488 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.34
@@ -39,48 +39,48 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-25T03:08:22.943+08:00  INFO 932 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-25T03:08:23.098+08:00  INFO 932 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T03:08:23.473+08:00  INFO 932 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-06-25T03:08:24.344+08:00  INFO 932 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-06-25T03:08:24.351+08:00  INFO 932 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 6.668 seconds (process running for 8.005)
-2025-06-25T03:08:27.004+08:00  INFO 932 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-25T03:08:27.004+08:00  INFO 932 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-25T03:08:27.005+08:00  INFO 932 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-06-25T03:59:57.466+08:00  INFO 932 --- [ClothWashing] [RMI TCP Connection(61)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-06-25T03:59:57.473+08:00  INFO 932 --- [ClothWashing] [RMI TCP Connection(61)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-25T03:59:57.477+08:00  INFO 932 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-25T03:59:57.484+08:00  INFO 932 --- [ClothWashing] [RMI TCP Connection(61)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T03:59:57.487+08:00  INFO 932 --- [ClothWashing] [RMI TCP Connection(61)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-25T03:59:57.491+08:00  INFO 932 --- [ClothWashing] [RMI TCP Connection(61)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-25T14:43:21.384+08:00  INFO 18232 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 18232 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
-2025-06-25T14:43:21.388+08:00  INFO 18232 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-25T14:43:22.416+08:00  INFO 18232 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T14:43:22.418+08:00  INFO 18232 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2025-06-25T14:43:22.464+08:00  INFO 18232 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T14:43:22.465+08:00  INFO 18232 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T14:43:22.467+08:00  INFO 18232 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T14:43:22.469+08:00  INFO 18232 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T14:43:22.471+08:00  INFO 18232 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T14:43:22.472+08:00  INFO 18232 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T14:43:22.473+08:00  INFO 18232 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 47 ms. Found 0 JDBC repository interfaces.
-2025-06-25T14:43:22.491+08:00  INFO 18232 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T14:43:22.492+08:00  INFO 18232 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-25T14:43:22.536+08:00  INFO 18232 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 6 JPA repository interfaces.
-2025-06-25T14:43:23.140+08:00  INFO 18232 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-06-25T14:43:23.158+08:00  INFO 18232 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-25T14:43:23.159+08:00  INFO 18232 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-25T14:43:23.468+08:00  INFO 18232 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-06-25T14:43:23.477+08:00  INFO 18232 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-25T14:43:23.477+08:00  INFO 18232 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2022 ms
-2025-06-25T14:43:23.659+08:00  INFO 18232 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-25T14:43:23.765+08:00  INFO 18232 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-25T14:43:23.821+08:00  INFO 18232 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-25T14:43:24.244+08:00  INFO 18232 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-25T14:43:24.291+08:00  INFO 18232 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-25T14:43:24.610+08:00  INFO 18232 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7bce9ce4
-2025-06-25T14:43:24.613+08:00  INFO 18232 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-25T14:43:24.811+08:00  INFO 18232 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-29T03:12:46.324+08:00  INFO 13488 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T03:12:46.453+08:00  INFO 13488 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:12:46.782+08:00  INFO 13488 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T03:12:47.495+08:00  INFO 13488 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T03:12:47.501+08:00  INFO 13488 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 5.751 seconds (process running for 6.426)
+2025-06-29T03:12:57.737+08:00  INFO 13488 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T03:12:57.737+08:00  INFO 13488 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T03:12:57.742+08:00  INFO 13488 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
+2025-06-29T03:47:59.423+08:00  INFO 13488 --- [ClothWashing] [RMI TCP Connection(44)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T03:47:59.427+08:00  INFO 13488 --- [ClothWashing] [RMI TCP Connection(44)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T03:47:59.430+08:00  INFO 13488 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T03:47:59.435+08:00  INFO 13488 --- [ClothWashing] [RMI TCP Connection(44)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:47:59.438+08:00  INFO 13488 --- [ClothWashing] [RMI TCP Connection(44)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T03:47:59.441+08:00  INFO 13488 --- [ClothWashing] [RMI TCP Connection(44)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T03:48:01.597+08:00  INFO 13856 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 13856 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T03:48:01.599+08:00  INFO 13856 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T03:48:02.154+08:00  INFO 13856 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:48:02.155+08:00  INFO 13856 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T03:48:02.186+08:00  INFO 13856 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:48:02.188+08:00  INFO 13856 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:48:02.188+08:00  INFO 13856 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:48:02.190+08:00  INFO 13856 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:48:02.191+08:00  INFO 13856 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:48:02.192+08:00  INFO 13856 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:48:02.193+08:00  INFO 13856 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2025-06-29T03:48:02.201+08:00  INFO 13856 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:48:02.202+08:00  INFO 13856 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T03:48:02.239+08:00  INFO 13856 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2025-06-29T03:48:02.715+08:00  INFO 13856 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T03:48:02.731+08:00  INFO 13856 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T03:48:02.731+08:00  INFO 13856 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T03:48:02.998+08:00  INFO 13856 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T03:48:03.005+08:00  INFO 13856 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T03:48:03.005+08:00  INFO 13856 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1373 ms
+2025-06-29T03:48:03.159+08:00  INFO 13856 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T03:48:03.252+08:00  INFO 13856 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T03:48:03.294+08:00  INFO 13856 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T03:48:03.598+08:00  INFO 13856 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T03:48:03.635+08:00  INFO 13856 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T03:48:03.800+08:00  INFO 13856 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25d0b918
+2025-06-29T03:48:03.801+08:00  INFO 13856 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T03:48:03.912+08:00  INFO 13856 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.34
@@ -88,48 +88,48 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-25T14:43:26.239+08:00  INFO 18232 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-25T14:43:26.396+08:00  INFO 18232 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T14:43:26.801+08:00  INFO 18232 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-06-25T14:43:27.507+08:00  INFO 18232 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-06-25T14:43:27.514+08:00  INFO 18232 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 6.822 seconds (process running for 7.678)
-2025-06-25T14:44:37.268+08:00  INFO 18232 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-25T14:44:37.268+08:00  INFO 18232 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-25T14:44:37.270+08:00  INFO 18232 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-06-25T15:32:39.091+08:00  INFO 18232 --- [ClothWashing] [RMI TCP Connection(59)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
-2025-06-25T15:32:39.094+08:00  INFO 18232 --- [ClothWashing] [RMI TCP Connection(59)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-06-25T15:32:39.097+08:00  INFO 18232 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-06-25T15:32:39.102+08:00  INFO 18232 --- [ClothWashing] [RMI TCP Connection(59)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T15:32:39.104+08:00  INFO 18232 --- [ClothWashing] [RMI TCP Connection(59)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-06-25T15:32:39.106+08:00  INFO 18232 --- [ClothWashing] [RMI TCP Connection(59)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-06-25T15:32:41.276+08:00  INFO 11172 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 11172 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
-2025-06-25T15:32:41.278+08:00  INFO 11172 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-25T15:32:41.880+08:00  INFO 11172 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T15:32:41.881+08:00  INFO 11172 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2025-06-25T15:32:41.914+08:00  INFO 11172 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T15:32:41.915+08:00  INFO 11172 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T15:32:41.916+08:00  INFO 11172 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T15:32:41.918+08:00  INFO 11172 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T15:32:41.919+08:00  INFO 11172 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T15:32:41.920+08:00  INFO 11172 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T15:32:41.921+08:00  INFO 11172 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
-2025-06-25T15:32:41.930+08:00  INFO 11172 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T15:32:41.931+08:00  INFO 11172 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-25T15:32:41.971+08:00  INFO 11172 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 6 JPA repository interfaces.
-2025-06-25T15:32:42.458+08:00  INFO 11172 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-06-25T15:32:42.473+08:00  INFO 11172 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-25T15:32:42.474+08:00  INFO 11172 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-25T15:32:42.721+08:00  INFO 11172 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-06-25T15:32:42.728+08:00  INFO 11172 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-25T15:32:42.728+08:00  INFO 11172 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1416 ms
-2025-06-25T15:32:42.877+08:00  INFO 11172 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-25T15:32:42.967+08:00  INFO 11172 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-25T15:32:43.010+08:00  INFO 11172 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-25T15:32:43.323+08:00  INFO 11172 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-25T15:32:43.362+08:00  INFO 11172 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-25T15:32:43.545+08:00  INFO 11172 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@302da330
-2025-06-25T15:32:43.547+08:00  INFO 11172 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-25T15:32:43.682+08:00  INFO 11172 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-29T03:48:04.965+08:00  INFO 13856 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T03:48:05.049+08:00  INFO 13856 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:48:05.253+08:00  INFO 13856 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T03:48:05.825+08:00  INFO 13856 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T03:48:05.832+08:00  INFO 13856 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 4.605 seconds (process running for 5.097)
+2025-06-29T03:48:23.707+08:00  INFO 13856 --- [ClothWashing] [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T03:48:23.707+08:00  INFO 13856 --- [ClothWashing] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T03:48:23.708+08:00  INFO 13856 --- [ClothWashing] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-29T03:49:02.335+08:00  INFO 13856 --- [ClothWashing] [RMI TCP Connection(9)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T03:49:02.338+08:00  INFO 13856 --- [ClothWashing] [RMI TCP Connection(9)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T03:49:02.341+08:00  INFO 13856 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T03:49:02.343+08:00  INFO 13856 --- [ClothWashing] [RMI TCP Connection(9)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:49:02.345+08:00  INFO 13856 --- [ClothWashing] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T03:49:02.351+08:00  INFO 13856 --- [ClothWashing] [RMI TCP Connection(9)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T03:49:04.243+08:00  INFO 14104 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 14104 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T03:49:04.244+08:00  INFO 14104 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T03:49:04.759+08:00  INFO 14104 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:49:04.760+08:00  INFO 14104 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T03:49:04.792+08:00  INFO 14104 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:49:04.794+08:00  INFO 14104 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:49:04.795+08:00  INFO 14104 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:49:04.796+08:00  INFO 14104 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:49:04.797+08:00  INFO 14104 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:49:04.798+08:00  INFO 14104 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:49:04.799+08:00  INFO 14104 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 0 JDBC repository interfaces.
+2025-06-29T03:49:04.807+08:00  INFO 14104 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:49:04.808+08:00  INFO 14104 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T03:49:04.843+08:00  INFO 14104 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 6 JPA repository interfaces.
+2025-06-29T03:49:05.259+08:00  INFO 14104 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T03:49:05.272+08:00  INFO 14104 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T03:49:05.273+08:00  INFO 14104 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T03:49:05.443+08:00  INFO 14104 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T03:49:05.449+08:00  INFO 14104 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T03:49:05.450+08:00  INFO 14104 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1173 ms
+2025-06-29T03:49:05.579+08:00  INFO 14104 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T03:49:05.633+08:00  INFO 14104 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T03:49:05.662+08:00  INFO 14104 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T03:49:05.893+08:00  INFO 14104 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T03:49:05.919+08:00  INFO 14104 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T03:49:06.048+08:00  INFO 14104 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5d9bb69b
+2025-06-29T03:49:06.050+08:00  INFO 14104 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T03:49:06.121+08:00  INFO 14104 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.34
@@ -137,42 +137,48 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-25T15:32:44.763+08:00  INFO 11172 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-25T15:32:44.885+08:00  INFO 11172 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T15:32:45.107+08:00  INFO 11172 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-06-25T15:32:45.644+08:00  INFO 11172 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-06-25T15:32:45.650+08:00  INFO 11172 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 4.766 seconds (process running for 5.304)
-2025-06-25T15:33:51.915+08:00  INFO 11172 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-25T15:33:51.916+08:00  INFO 11172 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-25T15:33:51.917+08:00  INFO 11172 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-06-25T18:48:40.636+08:00  INFO 4484 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 4484 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
-2025-06-25T18:48:40.640+08:00  INFO 4484 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
-2025-06-25T18:48:41.623+08:00  INFO 4484 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T18:48:41.626+08:00  INFO 4484 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
-2025-06-25T18:48:41.672+08:00  INFO 4484 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T18:48:41.673+08:00  INFO 4484 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T18:48:41.674+08:00  INFO 4484 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T18:48:41.676+08:00  INFO 4484 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T18:48:41.677+08:00  INFO 4484 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T18:48:41.678+08:00  INFO 4484 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
-2025-06-25T18:48:41.679+08:00  INFO 4484 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 0 JDBC repository interfaces.
-2025-06-25T18:48:41.692+08:00  INFO 4484 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
-2025-06-25T18:48:41.695+08:00  INFO 4484 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2025-06-25T18:48:41.741+08:00  INFO 4484 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 6 JPA repository interfaces.
-2025-06-25T18:48:42.389+08:00  INFO 4484 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
-2025-06-25T18:48:42.410+08:00  INFO 4484 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-06-25T18:48:42.410+08:00  INFO 4484 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
-2025-06-25T18:48:42.678+08:00  INFO 4484 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
-2025-06-25T18:48:42.686+08:00  INFO 4484 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-06-25T18:48:42.686+08:00  INFO 4484 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1973 ms
-2025-06-25T18:48:42.887+08:00  INFO 4484 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2025-06-25T18:48:42.995+08:00  INFO 4484 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
-2025-06-25T18:48:43.042+08:00  INFO 4484 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2025-06-25T18:48:43.420+08:00  INFO 4484 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2025-06-25T18:48:43.465+08:00  INFO 4484 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-06-25T18:48:43.778+08:00  INFO 4484 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2df71be0
-2025-06-25T18:48:43.781+08:00  INFO 4484 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-06-25T18:48:43.941+08:00  INFO 4484 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2025-06-29T03:49:06.964+08:00  INFO 14104 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T03:49:07.099+08:00  INFO 14104 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:49:07.297+08:00  INFO 14104 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T03:49:07.776+08:00  INFO 14104 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T03:49:07.782+08:00  INFO 14104 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 3.884 seconds (process running for 4.371)
+2025-06-29T03:49:12.822+08:00  INFO 14104 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T03:49:12.823+08:00  INFO 14104 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T03:49:12.824+08:00  INFO 14104 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-29T03:51:50.168+08:00  INFO 14104 --- [ClothWashing] [RMI TCP Connection(11)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T03:51:50.170+08:00  INFO 14104 --- [ClothWashing] [RMI TCP Connection(11)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T03:51:50.173+08:00  INFO 14104 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T03:51:50.176+08:00  INFO 14104 --- [ClothWashing] [RMI TCP Connection(11)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:51:50.177+08:00  INFO 14104 --- [ClothWashing] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T03:51:50.182+08:00  INFO 14104 --- [ClothWashing] [RMI TCP Connection(11)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T03:51:52.175+08:00  INFO 15616 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 15616 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T03:51:52.177+08:00  INFO 15616 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T03:51:52.693+08:00  INFO 15616 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:51:52.694+08:00  INFO 15616 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T03:51:52.726+08:00  INFO 15616 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:51:52.727+08:00  INFO 15616 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:51:52.728+08:00  INFO 15616 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:51:52.729+08:00  INFO 15616 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:51:52.730+08:00  INFO 15616 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:51:52.731+08:00  INFO 15616 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:51:52.731+08:00  INFO 15616 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2025-06-29T03:51:52.740+08:00  INFO 15616 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:51:52.741+08:00  INFO 15616 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T03:51:52.777+08:00  INFO 15616 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2025-06-29T03:51:53.188+08:00  INFO 15616 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T03:51:53.201+08:00  INFO 15616 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T03:51:53.201+08:00  INFO 15616 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T03:51:53.367+08:00  INFO 15616 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T03:51:53.374+08:00  INFO 15616 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T03:51:53.374+08:00  INFO 15616 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1164 ms
+2025-06-29T03:51:53.498+08:00  INFO 15616 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T03:51:53.551+08:00  INFO 15616 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T03:51:53.581+08:00  INFO 15616 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T03:51:53.811+08:00  INFO 15616 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T03:51:53.837+08:00  INFO 15616 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T03:51:53.967+08:00  INFO 15616 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@25d0b918
+2025-06-29T03:51:53.968+08:00  INFO 15616 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T03:51:54.037+08:00  INFO 15616 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.34
@@ -180,29 +186,265 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2025-06-25T18:48:45.064+08:00  INFO 4484 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2025-06-25T18:48:45.203+08:00  INFO 4484 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2025-06-25T18:48:45.501+08:00  INFO 4484 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
-2025-06-25T18:48:46.176+08:00  INFO 4484 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
-2025-06-25T18:48:46.182+08:00  INFO 4484 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 6.197 seconds (process running for 7.614)
-2025-06-25T18:52:08.090+08:00  INFO 4484 --- [ClothWashing] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-06-25T18:52:08.090+08:00  INFO 4484 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-06-25T18:52:08.092+08:00  INFO 4484 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-06-25T19:21:33.849+08:00 ERROR 4484 --- [ClothWashing] [http-nio-8081-exec-9] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.example.demo.exception.PasswordErrorException: 密碼錯誤] with root cause
+2025-06-29T03:51:54.889+08:00  INFO 15616 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T03:51:54.979+08:00  INFO 15616 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:51:55.174+08:00  INFO 15616 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T03:51:55.649+08:00  INFO 15616 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T03:51:55.655+08:00  INFO 15616 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 3.824 seconds (process running for 4.374)
+2025-06-29T03:51:59.743+08:00  INFO 15616 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T03:51:59.744+08:00  INFO 15616 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T03:51:59.745+08:00  INFO 15616 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-29T03:54:25.856+08:00  INFO 15616 --- [ClothWashing] [RMI TCP Connection(13)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T03:54:25.858+08:00  INFO 15616 --- [ClothWashing] [RMI TCP Connection(13)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T03:54:25.862+08:00  INFO 15616 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T03:54:25.865+08:00  INFO 15616 --- [ClothWashing] [RMI TCP Connection(13)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:54:25.867+08:00  INFO 15616 --- [ClothWashing] [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T03:54:25.872+08:00  INFO 15616 --- [ClothWashing] [RMI TCP Connection(13)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T03:54:27.729+08:00  INFO 9992 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 9992 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T03:54:27.731+08:00  INFO 9992 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T03:54:28.246+08:00  INFO 9992 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:54:28.248+08:00  INFO 9992 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T03:54:28.278+08:00  INFO 9992 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:54:28.279+08:00  INFO 9992 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:54:28.280+08:00  INFO 9992 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:54:28.282+08:00  INFO 9992 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:54:28.283+08:00  INFO 9992 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:54:28.284+08:00  INFO 9992 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:54:28.284+08:00  INFO 9992 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2025-06-29T03:54:28.293+08:00  INFO 9992 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:54:28.294+08:00  INFO 9992 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T03:54:28.329+08:00  INFO 9992 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 6 JPA repository interfaces.
+2025-06-29T03:54:28.742+08:00  INFO 9992 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T03:54:28.755+08:00  INFO 9992 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T03:54:28.755+08:00  INFO 9992 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T03:54:28.919+08:00  INFO 9992 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T03:54:28.926+08:00  INFO 9992 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T03:54:28.926+08:00  INFO 9992 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1163 ms
+2025-06-29T03:54:29.051+08:00  INFO 9992 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T03:54:29.106+08:00  INFO 9992 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T03:54:29.136+08:00  INFO 9992 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T03:54:29.366+08:00  INFO 9992 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T03:54:29.392+08:00  INFO 9992 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T03:54:29.523+08:00  INFO 9992 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56cd5d76
+2025-06-29T03:54:29.525+08:00  INFO 9992 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T03:54:29.590+08:00  INFO 9992 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T03:54:30.449+08:00  INFO 9992 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T03:54:30.530+08:00  INFO 9992 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:54:30.733+08:00  INFO 9992 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T03:54:31.222+08:00  INFO 9992 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T03:54:31.227+08:00  INFO 9992 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 3.845 seconds (process running for 4.329)
+2025-06-29T03:54:35.119+08:00  INFO 9992 --- [ClothWashing] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T03:54:35.119+08:00  INFO 9992 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T03:54:35.120+08:00  INFO 9992 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-29T03:56:21.458+08:00  INFO 9992 --- [ClothWashing] [RMI TCP Connection(12)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T03:56:21.460+08:00  INFO 9992 --- [ClothWashing] [RMI TCP Connection(12)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T03:56:21.463+08:00  INFO 9992 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T03:56:21.467+08:00  INFO 9992 --- [ClothWashing] [RMI TCP Connection(12)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:56:21.468+08:00  INFO 9992 --- [ClothWashing] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T03:56:21.473+08:00  INFO 9992 --- [ClothWashing] [RMI TCP Connection(12)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T03:56:23.353+08:00  INFO 13988 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 13988 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T03:56:23.355+08:00  INFO 13988 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T03:56:23.870+08:00  INFO 13988 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:56:23.871+08:00  INFO 13988 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T03:56:23.902+08:00  INFO 13988 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:56:23.903+08:00  INFO 13988 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:56:23.905+08:00  INFO 13988 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:56:23.905+08:00  INFO 13988 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:56:23.907+08:00  INFO 13988 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:56:23.907+08:00  INFO 13988 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T03:56:23.908+08:00  INFO 13988 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2025-06-29T03:56:23.917+08:00  INFO 13988 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T03:56:23.917+08:00  INFO 13988 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T03:56:23.952+08:00  INFO 13988 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 30 ms. Found 6 JPA repository interfaces.
+2025-06-29T03:56:24.363+08:00  INFO 13988 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T03:56:24.376+08:00  INFO 13988 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T03:56:24.376+08:00  INFO 13988 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T03:56:24.540+08:00  INFO 13988 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T03:56:24.547+08:00  INFO 13988 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T03:56:24.547+08:00  INFO 13988 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1160 ms
+2025-06-29T03:56:24.674+08:00  INFO 13988 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T03:56:24.729+08:00  INFO 13988 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T03:56:24.759+08:00  INFO 13988 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T03:56:24.986+08:00  INFO 13988 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T03:56:25.014+08:00  INFO 13988 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T03:56:25.144+08:00  INFO 13988 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@302da330
+2025-06-29T03:56:25.146+08:00  INFO 13988 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T03:56:25.217+08:00  INFO 13988 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T03:56:26.067+08:00  INFO 13988 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T03:56:26.140+08:00  INFO 13988 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T03:56:26.338+08:00  INFO 13988 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T03:56:26.840+08:00  INFO 13988 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T03:56:26.846+08:00  INFO 13988 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 3.84 seconds (process running for 4.331)
+2025-06-29T03:56:30.640+08:00  INFO 13988 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T03:56:30.641+08:00  INFO 13988 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T03:56:30.643+08:00  INFO 13988 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-29T04:16:35.631+08:00  INFO 13988 --- [ClothWashing] [RMI TCP Connection(28)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T04:16:35.634+08:00  INFO 13988 --- [ClothWashing] [RMI TCP Connection(28)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T04:16:35.637+08:00  INFO 13988 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T04:16:35.642+08:00  INFO 13988 --- [ClothWashing] [RMI TCP Connection(28)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:16:35.645+08:00  INFO 13988 --- [ClothWashing] [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T04:16:35.652+08:00  INFO 13988 --- [ClothWashing] [RMI TCP Connection(28)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T04:16:37.917+08:00  INFO 3956 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 3956 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T04:16:37.919+08:00  INFO 3956 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T04:16:38.517+08:00  INFO 3956 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:16:38.518+08:00  INFO 3956 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T04:16:38.551+08:00  INFO 3956 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:16:38.552+08:00  INFO 3956 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:16:38.553+08:00  INFO 3956 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:16:38.554+08:00  INFO 3956 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:16:38.555+08:00  INFO 3956 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:16:38.556+08:00  INFO 3956 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:16:38.557+08:00  INFO 3956 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 0 JDBC repository interfaces.
+2025-06-29T04:16:38.565+08:00  INFO 3956 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:16:38.566+08:00  INFO 3956 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T04:16:38.631+08:00  INFO 3956 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 60 ms. Found 6 JPA repository interfaces.
+2025-06-29T04:16:39.138+08:00  INFO 3956 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T04:16:39.154+08:00  INFO 3956 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T04:16:39.154+08:00  INFO 3956 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T04:16:39.376+08:00  INFO 3956 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T04:16:39.382+08:00  INFO 3956 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T04:16:39.382+08:00  INFO 3956 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1431 ms
+2025-06-29T04:16:39.529+08:00  INFO 3956 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T04:16:39.640+08:00  INFO 3956 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T04:16:39.687+08:00  INFO 3956 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T04:16:39.985+08:00  INFO 3956 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T04:16:40.021+08:00  INFO 3956 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T04:16:40.183+08:00  INFO 3956 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@77cd235b
+2025-06-29T04:16:40.185+08:00  INFO 3956 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T04:16:40.284+08:00  INFO 3956 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T04:16:41.427+08:00  INFO 3956 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T04:16:41.640+08:00  INFO 3956 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:16:41.850+08:00  INFO 3956 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T04:16:42.415+08:00  INFO 3956 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T04:16:42.426+08:00  INFO 3956 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 4.856 seconds (process running for 5.446)
+2025-06-29T04:17:23.144+08:00  INFO 3956 --- [ClothWashing] [RMI TCP Connection(10)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T04:17:23.146+08:00  INFO 3956 --- [ClothWashing] [RMI TCP Connection(10)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T04:17:23.149+08:00  INFO 3956 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T04:17:23.152+08:00  INFO 3956 --- [ClothWashing] [RMI TCP Connection(10)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:17:23.154+08:00  INFO 3956 --- [ClothWashing] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T04:17:23.161+08:00  INFO 3956 --- [ClothWashing] [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T04:17:25.007+08:00  INFO 13276 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 13276 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T04:17:25.008+08:00  INFO 13276 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T04:17:25.524+08:00  INFO 13276 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:17:25.525+08:00  INFO 13276 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T04:17:25.556+08:00  INFO 13276 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:17:25.558+08:00  INFO 13276 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:17:25.559+08:00  INFO 13276 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:17:25.560+08:00  INFO 13276 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:17:25.561+08:00  INFO 13276 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:17:25.562+08:00  INFO 13276 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:17:25.562+08:00  INFO 13276 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 0 JDBC repository interfaces.
+2025-06-29T04:17:25.572+08:00  INFO 13276 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:17:25.573+08:00  INFO 13276 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T04:17:25.608+08:00  INFO 13276 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2025-06-29T04:17:26.020+08:00  INFO 13276 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T04:17:26.033+08:00  INFO 13276 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T04:17:26.033+08:00  INFO 13276 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T04:17:26.197+08:00  INFO 13276 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T04:17:26.204+08:00  INFO 13276 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T04:17:26.205+08:00  INFO 13276 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1165 ms
+2025-06-29T04:17:26.335+08:00  INFO 13276 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T04:17:26.388+08:00  INFO 13276 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T04:17:26.418+08:00  INFO 13276 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T04:17:26.645+08:00  INFO 13276 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T04:17:26.671+08:00  INFO 13276 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T04:17:26.801+08:00  INFO 13276 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@595ec862
+2025-06-29T04:17:26.803+08:00  INFO 13276 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T04:17:26.881+08:00  INFO 13276 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T04:17:27.745+08:00  INFO 13276 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T04:17:28.578+08:00  INFO 13276 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:17:28.784+08:00  INFO 13276 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T04:17:29.276+08:00  INFO 13276 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T04:17:29.282+08:00  INFO 13276 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 4.621 seconds (process running for 5.106)
+2025-06-29T04:18:22.912+08:00  INFO 13276 --- [ClothWashing] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T04:18:22.913+08:00  INFO 13276 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T04:18:22.915+08:00  INFO 13276 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-29T04:19:12.799+08:00  WARN 13276 --- [ClothWashing] [http-nio-8081-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : SQL Error: 1054, SQLState: 42S22
+2025-06-29T04:19:12.800+08:00 ERROR 13276 --- [ClothWashing] [http-nio-8081-exec-5] o.h.engine.jdbc.spi.SqlExceptionHelper   : Unknown column 'verifyToken' in 'where clause'
+2025-06-29T04:19:12.814+08:00 ERROR 13276 --- [ClothWashing] [http-nio-8081-exec-5] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: org.springframework.dao.InvalidDataAccessResourceUsageException: JDBC exception executing SQL [select * from user where verifyToken = ?] [Unknown column 'verifyToken' in 'where clause'] [n/a]; SQL [n/a]] with root cause
 
-com.example.demo.exception.PasswordErrorException: 密碼錯誤
-	at com.example.demo.service.impl.UserServiceImpl.getUser(UserServiceImpl.java:39) ~[classes/:na]
+java.sql.SQLSyntaxErrorException: Unknown column 'verifyToken' in 'where clause'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:112) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:114) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:988) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeQuery(ClientPreparedStatement.java:1056) ~[mysql-connector-j-9.1.0.jar:9.1.0]
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeQuery(ProxyPreparedStatement.java:52) ~[HikariCP-5.1.0.jar:na]
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeQuery(HikariProxyPreparedStatement.java) ~[HikariCP-5.1.0.jar:na]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.executeQuery(DeferredResultSetAccess.java:250) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess.getResultSet(DeferredResultSetAccess.java:171) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getMetaData(AbstractResultSetAccess.java:36) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.results.jdbc.internal.AbstractResultSetAccess.getColumnCount(AbstractResultSetAccess.java:52) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.query.results.ResultSetMappingImpl.resolve(ResultSetMappingImpl.java:194) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.resolveJdbcValuesSource(JdbcSelectExecutorStandardImpl.java:340) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.doExecuteQuery(JdbcSelectExecutorStandardImpl.java:137) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.internal.JdbcSelectExecutorStandardImpl.executeQuery(JdbcSelectExecutorStandardImpl.java:102) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.executeQuery(JdbcSelectExecutor.java:91) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:165) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:142) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.sql.exec.spi.JdbcSelectExecutor.list(JdbcSelectExecutor.java:132) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.query.sql.internal.NativeSelectQueryPlanImpl.performList(NativeSelectQueryPlanImpl.java:135) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.query.sql.internal.NativeQueryImpl.doList(NativeQueryImpl.java:693) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:143) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.getSingleResult(AbstractSelectionQuery.java:275) ~[hibernate-core-6.6.13.Final.jar:6.6.13.Final]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$DeferredQueryInvocationHandler.invoke(SharedEntityManagerCreator.java:419) ~[spring-orm-6.2.6.jar:6.2.6]
+	at jdk.proxy2/jdk.proxy2.$Proxy144.getSingleResult(Unknown Source) ~[na:na]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution$SingleEntityExecution.doExecute(JpaQueryExecution.java:224) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.JpaQueryExecution.execute(JpaQueryExecution.java:93) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.doExecute(AbstractJpaQuery.java:152) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.jpa.repository.query.AbstractJpaQuery.execute(AbstractJpaQuery.java:140) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:170) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:158) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:170) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:149) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:69) ~[spring-data-commons-3.4.5.jar:3.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
 	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.6.jar:6.2.6]
 	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.6.jar:6.2.6]
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.6.jar:6.2.6]
-	at com.example.demo.service.impl.UserServiceImpl$$SpringCGLIB$$0.getUser(<generated>) ~[classes/:na]
-	at com.example.demo.controller.ClothRestController.login(ClothRestController.java:215) ~[classes/:na]
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:138) ~[spring-tx-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:136) ~[spring-data-jpa-3.4.5.jar:3.4.5]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:223) ~[spring-aop-6.2.6.jar:6.2.6]
+	at jdk.proxy2/jdk.proxy2.$Proxy127.findByVerifyToken(Unknown Source) ~[na:na]
+	at com.example.demo.service.impl.UserServiceImpl.verifyUser(UserServiceImpl.java:107) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:724) ~[spring-aop-6.2.6.jar:6.2.6]
+	at com.example.demo.service.impl.UserServiceImpl$$SpringCGLIB$$0.verifyUser(<generated>) ~[classes/:na]
+	at com.example.demo.controller.ClothRestController.submitVerify(ClothRestController.java:300) ~[classes/:na]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
 	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
@@ -214,8 +456,8 @@ com.example.demo.exception.PasswordErrorException: 密碼錯誤
 	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
 	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
 	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:903) ~[spring-webmvc-6.2.6.jar:6.2.6]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:564) ~[tomcat-embed-core-10.1.40.jar:6.0]
 	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
 	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
 	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
@@ -256,72 +498,150 @@ com.example.demo.exception.PasswordErrorException: 密碼錯誤
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
 	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
 
-2025-06-25T19:21:47.901+08:00 ERROR 4484 --- [ClothWashing] [http-nio-8081-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: com.example.demo.exception.PasswordErrorException: 密碼錯誤] with root cause
-
-com.example.demo.exception.PasswordErrorException: 密碼錯誤
-	at com.example.demo.service.impl.UserServiceImpl.getUser(UserServiceImpl.java:39) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:359) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:380) ~[spring-tx-6.2.6.jar:6.2.6]
-	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.2.6.jar:6.2.6]
-	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:728) ~[spring-aop-6.2.6.jar:6.2.6]
-	at com.example.demo.service.impl.UserServiceImpl$$SpringCGLIB$$0.getUser(<generated>) ~[classes/:na]
-	at com.example.demo.controller.ClothRestController.login(ClothRestController.java:215) ~[classes/:na]
-	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:258) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:191) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1089) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:979) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.40.jar:6.0]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.6.jar:6.2.6]
-	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.40.jar:6.0]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:91) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.6.jar:6.2.6]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:116) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:398) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:903) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1189) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:658) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.40.jar:10.1.40]
-	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
-
-2025-06-25T20:26:23.371+08:00  WARN 4484 --- [ClothWashing] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4m8s164ms525µs300ns).
+2025-06-29T04:22:36.673+08:00  INFO 13276 --- [ClothWashing] [RMI TCP Connection(14)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T04:22:36.675+08:00  INFO 13276 --- [ClothWashing] [RMI TCP Connection(14)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T04:22:36.678+08:00  INFO 13276 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T04:22:36.682+08:00  INFO 13276 --- [ClothWashing] [RMI TCP Connection(14)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:22:36.684+08:00  INFO 13276 --- [ClothWashing] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T04:22:36.690+08:00  INFO 13276 --- [ClothWashing] [RMI TCP Connection(14)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T04:22:38.700+08:00  INFO 11504 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 11504 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T04:22:38.702+08:00  INFO 11504 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T04:22:40.033+08:00  INFO 11504 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:22:40.034+08:00  INFO 11504 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T04:22:40.070+08:00  INFO 11504 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:22:40.071+08:00  INFO 11504 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:22:40.072+08:00  INFO 11504 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:22:40.073+08:00  INFO 11504 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:22:40.074+08:00  INFO 11504 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:22:40.075+08:00  INFO 11504 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:22:40.076+08:00  INFO 11504 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 0 JDBC repository interfaces.
+2025-06-29T04:22:40.085+08:00  INFO 11504 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:22:40.086+08:00  INFO 11504 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T04:22:40.127+08:00  INFO 11504 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 6 JPA repository interfaces.
+2025-06-29T04:22:40.588+08:00  INFO 11504 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T04:22:40.610+08:00  INFO 11504 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T04:22:40.610+08:00  INFO 11504 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T04:22:40.889+08:00  INFO 11504 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T04:22:40.896+08:00  INFO 11504 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T04:22:40.896+08:00  INFO 11504 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2161 ms
+2025-06-29T04:22:41.066+08:00  INFO 11504 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T04:22:41.154+08:00  INFO 11504 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T04:22:41.194+08:00  INFO 11504 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T04:22:41.513+08:00  INFO 11504 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T04:22:41.548+08:00  INFO 11504 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T04:22:41.725+08:00  INFO 11504 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@9bf63d2
+2025-06-29T04:22:41.727+08:00  INFO 11504 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T04:22:41.828+08:00  INFO 11504 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T04:22:42.915+08:00  INFO 11504 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T04:22:43.936+08:00  INFO 11504 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:22:44.138+08:00  INFO 11504 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T04:22:44.642+08:00  INFO 11504 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T04:22:44.648+08:00  INFO 11504 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 6.293 seconds (process running for 6.785)
+2025-06-29T04:23:02.481+08:00  INFO 11504 --- [ClothWashing] [http-nio-8081-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T04:23:02.481+08:00  INFO 11504 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T04:23:02.482+08:00  INFO 11504 --- [ClothWashing] [http-nio-8081-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-06-29T04:30:53.671+08:00  INFO 11504 --- [ClothWashing] [RMI TCP Connection(16)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T04:30:53.674+08:00  INFO 11504 --- [ClothWashing] [RMI TCP Connection(16)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T04:30:53.677+08:00  INFO 11504 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T04:30:53.680+08:00  INFO 11504 --- [ClothWashing] [RMI TCP Connection(16)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:30:53.682+08:00  INFO 11504 --- [ClothWashing] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T04:30:53.687+08:00  INFO 11504 --- [ClothWashing] [RMI TCP Connection(16)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T04:30:55.573+08:00  INFO 14356 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 14356 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T04:30:55.575+08:00  INFO 14356 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T04:30:56.099+08:00  INFO 14356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:30:56.101+08:00  INFO 14356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T04:30:56.131+08:00  INFO 14356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:30:56.132+08:00  INFO 14356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:30:56.133+08:00  INFO 14356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:30:56.134+08:00  INFO 14356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:30:56.135+08:00  INFO 14356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:30:56.136+08:00  INFO 14356 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T04:30:56.137+08:00  INFO 14356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 0 JDBC repository interfaces.
+2025-06-29T04:30:56.146+08:00  INFO 14356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T04:30:56.146+08:00  INFO 14356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T04:30:56.182+08:00  INFO 14356 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 6 JPA repository interfaces.
+2025-06-29T04:30:56.591+08:00  INFO 14356 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T04:30:56.604+08:00  INFO 14356 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T04:30:56.605+08:00  INFO 14356 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T04:30:56.770+08:00  INFO 14356 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T04:30:56.776+08:00  INFO 14356 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T04:30:56.777+08:00  INFO 14356 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1168 ms
+2025-06-29T04:30:56.901+08:00  INFO 14356 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T04:30:56.955+08:00  INFO 14356 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T04:30:56.985+08:00  INFO 14356 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T04:30:57.213+08:00  INFO 14356 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T04:30:57.239+08:00  INFO 14356 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T04:30:57.372+08:00  INFO 14356 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@abc7005
+2025-06-29T04:30:57.373+08:00  INFO 14356 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T04:30:57.442+08:00  INFO 14356 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T04:30:58.298+08:00  INFO 14356 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T04:30:59.165+08:00  INFO 14356 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T04:30:59.365+08:00  INFO 14356 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T04:30:59.853+08:00  INFO 14356 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T04:30:59.859+08:00  INFO 14356 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 4.629 seconds (process running for 5.116)
+2025-06-29T04:32:43.415+08:00  INFO 14356 --- [ClothWashing] [http-nio-8081-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T04:32:43.415+08:00  INFO 14356 --- [ClothWashing] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T04:32:43.417+08:00  INFO 14356 --- [ClothWashing] [http-nio-8081-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-06-29T05:03:18.612+08:00  INFO 14356 --- [ClothWashing] [RMI TCP Connection(43)-127.0.0.1] inMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2025-06-29T05:03:18.680+08:00  INFO 14356 --- [ClothWashing] [RMI TCP Connection(43)-127.0.0.1] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-06-29T05:03:18.691+08:00  INFO 14356 --- [ClothWashing] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-06-29T05:03:18.716+08:00  INFO 14356 --- [ClothWashing] [RMI TCP Connection(43)-127.0.0.1] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T05:03:18.724+08:00  INFO 14356 --- [ClothWashing] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-06-29T05:03:18.730+08:00  INFO 14356 --- [ClothWashing] [RMI TCP Connection(43)-127.0.0.1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-06-29T22:48:36.894+08:00  INFO 14620 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Starting ClothWashingApplication using Java 21.0.6 with PID 14620 (C:\Users\User\git\clothwashing\target\classes started by User in C:\Users\User\git\clothwashing)
+2025-06-29T22:48:36.896+08:00  INFO 14620 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : No active profile set, falling back to 1 default profile: "default"
+2025-06-29T22:48:38.025+08:00  INFO 14620 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T22:48:38.027+08:00  INFO 14620 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2025-06-29T22:48:38.079+08:00  INFO 14620 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ClothRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T22:48:38.082+08:00  INFO 14620 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ContentRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T22:48:38.084+08:00  INFO 14620 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ItemRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T22:48:38.086+08:00  INFO 14620 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.ReceiverRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T22:48:38.087+08:00  INFO 14620 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.SenderRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T22:48:38.089+08:00  INFO 14620 --- [ClothWashing] [main] .RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.example.demo.repository.UserRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2025-06-29T22:48:38.089+08:00  INFO 14620 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 55 ms. Found 0 JDBC repository interfaces.
+2025-06-29T22:48:38.103+08:00  INFO 14620 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2025-06-29T22:48:38.106+08:00  INFO 14620 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-06-29T22:48:38.151+08:00  INFO 14620 --- [ClothWashing] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 6 JPA repository interfaces.
+2025-06-29T22:48:38.746+08:00  INFO 14620 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8081 (http)
+2025-06-29T22:48:38.767+08:00  INFO 14620 --- [ClothWashing] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-06-29T22:48:38.767+08:00  INFO 14620 --- [ClothWashing] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.40]
+2025-06-29T22:48:39.028+08:00  INFO 14620 --- [ClothWashing] [main] org.apache.jasper.servlet.TldScanner     : At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2025-06-29T22:48:39.036+08:00  INFO 14620 --- [ClothWashing] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-06-29T22:48:39.037+08:00  INFO 14620 --- [ClothWashing] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 2079 ms
+2025-06-29T22:48:39.212+08:00  INFO 14620 --- [ClothWashing] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-06-29T22:48:39.315+08:00  INFO 14620 --- [ClothWashing] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.13.Final
+2025-06-29T22:48:39.363+08:00  INFO 14620 --- [ClothWashing] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-06-29T22:48:39.732+08:00  INFO 14620 --- [ClothWashing] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-06-29T22:48:39.772+08:00  INFO 14620 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-06-29T22:48:40.276+08:00  INFO 14620 --- [ClothWashing] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@595ec862
+2025-06-29T22:48:40.278+08:00  INFO 14620 --- [ClothWashing] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-06-29T22:48:40.522+08:00  INFO 14620 --- [ClothWashing] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.34
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-06-29T22:48:41.665+08:00  INFO 14620 --- [ClothWashing] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-06-29T22:48:41.918+08:00  INFO 14620 --- [ClothWashing] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-06-29T22:48:42.228+08:00  INFO 14620 --- [ClothWashing] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-06-29T22:48:43.002+08:00  INFO 14620 --- [ClothWashing] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8081 (http) with context path '/'
+2025-06-29T22:48:43.008+08:00  INFO 14620 --- [ClothWashing] [main] c.example.demo.ClothWashingApplication   : Started ClothWashingApplication in 6.758 seconds (process running for 8.158)
+2025-06-29T22:49:13.153+08:00  INFO 14620 --- [ClothWashing] [http-nio-8081-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-06-29T22:49:13.154+08:00  INFO 14620 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-06-29T22:49:13.156+08:00  INFO 14620 --- [ClothWashing] [http-nio-8081-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
